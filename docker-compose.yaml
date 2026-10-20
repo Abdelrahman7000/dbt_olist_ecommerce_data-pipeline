@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_DB: ecommerce_db
+      POSTGRES_USER: dbt_user
+      POSTGRES_PASSWORD: dbt_password
+    ports:
+      - "5432:5432"
+    volumes:
+      # Mounts a named volume to persist PostgreSQL data which means that the data will be retained even if the container is removed or recreated.
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dbt_user -d ecommerce_db -h 127.0.0.1"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - dbt_ecom_network
+
+  dbt:
+    build: .
+    container_name: dbt_runner
+    environment:
+      DBT_PROFILES_DIR: /usr/app/dbt
+    volumes:
+      # Mounts your local dbt project directory to the container
+      - .:/usr/app/dbt
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - dbt_ecom_network
+    # Keeps container idle so you can execute custom dbt commands
+    entrypoint: ["tail", "-f", "/dev/null"]
+
+volumes:
+  postgres_data:
+
+networks:
+  dbt_ecom_network:
+    driver: bridge

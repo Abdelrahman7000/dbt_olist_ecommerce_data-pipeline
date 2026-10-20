@@ -1,0 +1,17 @@
+
+  create view "ecommerce_db"."raw"."customers__dbt_tmp"
+    
+    
+  as (
+    with customers as (
+    select 
+        customer_id,
+        customer_unique_id,
+        customer_zip_code_prefix,
+        lower(customer_city) as customer_city,
+        upper(customer_state) as customer_state
+    from "ecommerce_db"."raw"."stg_customers"
+)
+
+select * from customers
+  );

@@ -1,0 +1,12 @@
+ecommerce-dbt-project:             # <--- Matches the profile key in dbt_project.yml
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: postgres  # Matches the postgres service name in docker-compose.yml
+      port: 5432
+      user: dbt_user
+      pass: dbt_password
+      dbname: ecommerce_db
+      schema: raw
+      threads: 4

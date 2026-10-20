@@ -1,0 +1,27 @@
+name: 'ecommerce_analytics'
+version: '1.0.0'
+config-version: 2
+
+profile: 'ecommerce-dbt-project'   # <--- Matches the key in profiles.yml
+
+model-paths: ["models"]
+analysis-paths: ["analysis"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_modules"
+
+models:
+  ecommerce_analytics:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: table
+      +schema: intermediate
+    marts:
+      +materialized: table
+      +schema: marts
