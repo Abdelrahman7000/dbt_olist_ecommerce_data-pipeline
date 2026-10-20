@@ -31,9 +31,10 @@ select
     
     -- Operational Flag
     case 
-        when order_delivered_customer_date > order_estimated_delivery_date and o.order_status = 'delivered'then true 
-        when order_delivered_customer_date < order_estimated_delivery_date and o.order_status = 'delivered'then false
+        when order_delivered_customer_date > order_estimated_delivery_date and order_status = 'delivered'then true 
+        when order_delivered_customer_date < order_estimated_delivery_date and order_status = 'delivered'then false
         else null 
     end as is_delivery_delayed
 
 from orders
+

@@ -1,9 +1,9 @@
-{% snapshot snapshot_sellers %}
+{% snapshot snapshot_customers %}
 
 {{
     config(
       target_schema='snapshots',
-      unique_key='seller_id',
+      unique_key='customer_id',
       strategy='check',
       check_cols=['customer_zip_code_prefix', 'customer_city', 'customer_state'],
     )

@@ -5,6 +5,10 @@ with location as (
         geolocation_lng :: DOUBLE PRECISION,
         lower(geolocation_city) as geolocation_city,
         upper(geolocation_state) as geolocation_state
+    FROM {{ ref('stg_location') }}
 )
 SELECT *
 FROM location
+
+
+

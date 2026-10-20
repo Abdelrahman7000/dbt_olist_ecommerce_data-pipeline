@@ -16,3 +16,5 @@ with order_reviews as(
         review_answer_timestamp :: timestamp
     from {{ ref('stg_order_reviews') }}
 )
+
+select * from order_reviews

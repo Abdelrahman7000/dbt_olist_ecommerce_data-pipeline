@@ -18,8 +18,8 @@ translations as (
 select
     p.product_id,
     coalesce(t.product_category_name_english, p.product_category_name, 'unknown') as product_category_name,
-    p.product_name_lenght,
-    p.product_description_lenght,
+    p.product_name_length,
+    p.product_description_length,
     p.product_photos_qty,
     coalesce(p.product_weight_g, 0) as product_weight_g,
     coalesce(p.product_length_cm, 0) as product_length_cm,
