@@ -14054,3 +14054,481 @@ KeyboardInterrupt
 [0m21:54:24.624791 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f033b690d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f033b6905d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f033a102990>]}
 [0m21:54:24.630458 [debug] [MainThread]: Flushing usage events
 [0m21:54:26.495615 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:05:26.149624 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5740feb050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f573df17850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f573df17a10>]}
+
+
+============================== 22:05:26.160016 | 75e1c2ed-ea83-4512-bd32-cb4c5b4150a1 ==============================
+[0m22:05:26.160016 [info ] [MainThread]: Running with dbt=1.12.5
+[0m22:05:26.164202 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'empty': 'None', 'maximum_seed_size_mib': '1', 'log_format': 'default', 'invocation_command': 'dbt docs generate', 'fail_fast': 'False', 'cache_selected_only': 'False', 'target_path': 'None', 'debug': 'False', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'log_cache_events': 'False', 'static_parser': 'True', 'quiet': 'False', 'log_path': '/usr/app/dbt/logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'printer_width': '80', 'write_json': 'True', 'no_print': 'None', 'introspect': 'True', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/usr/app/dbt', 'use_colors': 'True'}
+[0m22:05:26.644007 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '75e1c2ed-ea83-4512-bd32-cb4c5b4150a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f573cf3b790>]}
+[0m22:05:26.834347 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '75e1c2ed-ea83-4512-bd32-cb4c5b4150a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5740d97c10>]}
+[0m22:05:26.840586 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m22:05:27.150298 [debug] [MainThread]: checksum: 39348f98580677580056a0bb46f85cdaa9a8b6cd78ca138ccdf5cf0bc699d59b, vars: {}, profile: ecommerce-dbt-project, target: dev, version: 1.12.5
+[0m22:05:30.262872 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 0 files added, 0 files changed.
+[0m22:05:30.266470 [debug] [MainThread]: Partial parsing: deleted file: ecommerce_analytics://models/marts/orders_fct.sql
+[0m22:05:30.975926 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '75e1c2ed-ea83-4512-bd32-cb4c5b4150a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f573dcf1ed0>]}
+[0m22:05:31.134558 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '75e1c2ed-ea83-4512-bd32-cb4c5b4150a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f573c7c3fd0>]}
+[0m22:05:31.138393 [info ] [MainThread]: Found 24 models, 2 snapshots, 9 sources, 593 macros
+[0m22:05:31.149397 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '75e1c2ed-ea83-4512-bd32-cb4c5b4150a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5740db4ad0>]}
+[0m22:05:31.166271 [info ] [MainThread]: 
+[0m22:05:31.173359 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:05:31.189969 [info ] [MainThread]: 
+[0m22:05:31.203691 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m22:05:31.242442 [debug] [ThreadPool]: Acquiring new postgres connection 'list_ecommerce_db_intermediate'
+[0m22:05:31.244217 [debug] [ThreadPool]: Acquiring new postgres connection 'list_ecommerce_db_raw'
+[0m22:05:31.246138 [debug] [ThreadPool]: Acquiring new postgres connection 'list_ecommerce_db_snapshots'
+[0m22:05:31.254824 [debug] [ThreadPool]: Acquiring new postgres connection 'list_ecommerce_db_marts'
+[0m22:05:31.571580 [debug] [ThreadPool]: Using postgres connection "list_ecommerce_db_intermediate"
+[0m22:05:31.573914 [debug] [ThreadPool]: Using postgres connection "list_ecommerce_db_snapshots"
+[0m22:05:31.575619 [debug] [ThreadPool]: Using postgres connection "list_ecommerce_db_marts"
+[0m22:05:31.578471 [debug] [ThreadPool]: Using postgres connection "list_ecommerce_db_raw"
+[0m22:05:31.582790 [debug] [ThreadPool]: On list_ecommerce_db_intermediate: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "ecommerce-dbt-project", "target_name": "dev", "connection_name": "list_ecommerce_db_intermediate"} */
+select
+      'ecommerce_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'intermediate'
+    union all
+    select
+      'ecommerce_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'intermediate'
+    union all
+    select
+      'ecommerce_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'intermediate'
+    union all
+    select distinct
+     'ecommerce_db' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'intermediate'
+  
+[0m22:05:31.588966 [debug] [ThreadPool]: On list_ecommerce_db_snapshots: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "ecommerce-dbt-project", "target_name": "dev", "connection_name": "list_ecommerce_db_snapshots"} */
+select
+      'ecommerce_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'snapshots'
+    union all
+    select
+      'ecommerce_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'snapshots'
+    union all
+    select
+      'ecommerce_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'snapshots'
+    union all
+    select distinct
+     'ecommerce_db' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'snapshots'
+  
+[0m22:05:31.595119 [debug] [ThreadPool]: On list_ecommerce_db_marts: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "ecommerce-dbt-project", "target_name": "dev", "connection_name": "list_ecommerce_db_marts"} */
+select
+      'ecommerce_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'marts'
+    union all
+    select
+      'ecommerce_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'marts'
+    union all
+    select
+      'ecommerce_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'marts'
+    union all
+    select distinct
+     'ecommerce_db' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'marts'
+  
+[0m22:05:31.600620 [debug] [ThreadPool]: On list_ecommerce_db_raw: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "ecommerce-dbt-project", "target_name": "dev", "connection_name": "list_ecommerce_db_raw"} */
+select
+      'ecommerce_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw'
+    union all
+    select
+      'ecommerce_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw'
+    union all
+    select
+      'ecommerce_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw'
+    union all
+    select distinct
+     'ecommerce_db' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'raw'
+  
+[0m22:05:31.605398 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:05:31.609897 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:05:31.614168 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:05:31.617918 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:05:31.797400 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.183 seconds
+[0m22:05:31.801276 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.191 seconds
+[0m22:05:31.809292 [debug] [ThreadPool]: On list_ecommerce_db_marts: ROLLBACK
+[0m22:05:31.811107 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.206 seconds
+[0m22:05:31.820951 [debug] [ThreadPool]: On list_ecommerce_db_snapshots: ROLLBACK
+[0m22:05:31.823376 [debug] [ThreadPool]: SQL status: SELECT 18 in 0.206 seconds
+[0m22:05:31.825648 [debug] [ThreadPool]: On list_ecommerce_db_marts: Close
+[0m22:05:31.833715 [debug] [ThreadPool]: On list_ecommerce_db_intermediate: ROLLBACK
+[0m22:05:31.837894 [debug] [ThreadPool]: On list_ecommerce_db_snapshots: Close
+[0m22:05:31.843015 [debug] [ThreadPool]: On list_ecommerce_db_raw: ROLLBACK
+[0m22:05:31.856574 [debug] [ThreadPool]: On list_ecommerce_db_intermediate: Close
+[0m22:05:31.864170 [debug] [ThreadPool]: On list_ecommerce_db_raw: Close
+[0m22:05:31.901339 [debug] [MainThread]: Using postgres connection "master"
+[0m22:05:31.903958 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "ecommerce-dbt-project", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m22:05:31.906204 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:05:31.949232 [debug] [MainThread]: SQL status: SELECT 9 in 0.043 seconds
+[0m22:05:31.959211 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '75e1c2ed-ea83-4512-bd32-cb4c5b4150a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f573e80cb50>]}
+[0m22:05:31.961850 [debug] [MainThread]: On master: ROLLBACK
+[0m22:05:31.965407 [debug] [MainThread]: On master: Close
+[0m22:05:31.978425 [debug] [Thread-1 (]: Began running node model.ecommerce_analytics.stg_customers
+[0m22:05:31.979905 [debug] [Thread-2 (]: Began running node model.ecommerce_analytics.stg_location
+[0m22:05:31.981469 [debug] [Thread-3 (]: Began running node model.ecommerce_analytics.stg_order_items
+[0m22:05:31.983074 [debug] [Thread-4 (]: Began running node model.ecommerce_analytics.stg_order_payments
+[0m22:05:31.985282 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_ecommerce_db_raw, now model.ecommerce_analytics.stg_customers)
+[0m22:05:31.988390 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_ecommerce_db_intermediate, now model.ecommerce_analytics.stg_location)
+[0m22:05:31.991786 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_ecommerce_db_snapshots, now model.ecommerce_analytics.stg_order_items)
+[0m22:05:31.995424 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly list_ecommerce_db_marts, now model.ecommerce_analytics.stg_order_payments)
+[0m22:05:31.998991 [debug] [Thread-1 (]: Began compiling node model.ecommerce_analytics.stg_customers
+[0m22:05:32.002435 [debug] [Thread-2 (]: Began compiling node model.ecommerce_analytics.stg_location
+[0m22:05:32.005774 [debug] [Thread-3 (]: Began compiling node model.ecommerce_analytics.stg_order_items
+[0m22:05:32.009310 [debug] [Thread-4 (]: Began compiling node model.ecommerce_analytics.stg_order_payments
+[0m22:05:32.051389 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_analytics.stg_customers"
+[0m22:05:32.054137 [debug] [Thread-2 (]: Writing injected SQL for node "model.ecommerce_analytics.stg_location"
+[0m22:05:32.065024 [debug] [Thread-3 (]: Writing injected SQL for node "model.ecommerce_analytics.stg_order_items"
+[0m22:05:32.077624 [debug] [Thread-4 (]: Writing injected SQL for node "model.ecommerce_analytics.stg_order_payments"
+[0m22:05:32.096684 [debug] [Thread-2 (]: Began executing node model.ecommerce_analytics.stg_location
+[0m22:05:32.105690 [debug] [Thread-2 (]: Finished running node model.ecommerce_analytics.stg_location
+[0m22:05:32.107884 [debug] [Thread-1 (]: Began executing node model.ecommerce_analytics.stg_customers
+[0m22:05:32.110756 [debug] [Thread-3 (]: Began executing node model.ecommerce_analytics.stg_order_items
+[0m22:05:32.113947 [debug] [Thread-2 (]: Began running node model.ecommerce_analytics.stg_order_reviews
+[0m22:05:32.115532 [debug] [Thread-4 (]: Began executing node model.ecommerce_analytics.stg_order_payments
+[0m22:05:32.120607 [debug] [Thread-1 (]: Finished running node model.ecommerce_analytics.stg_customers
+[0m22:05:32.125277 [debug] [Thread-3 (]: Finished running node model.ecommerce_analytics.stg_order_items
+[0m22:05:32.128102 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.stg_location, now model.ecommerce_analytics.stg_order_reviews)
+[0m22:05:32.132844 [debug] [Thread-4 (]: Finished running node model.ecommerce_analytics.stg_order_payments
+[0m22:05:32.136070 [debug] [Thread-1 (]: Began running node model.ecommerce_analytics.stg_orders
+[0m22:05:32.143052 [debug] [Thread-3 (]: Began running node model.ecommerce_analytics.stg_product_category
+[0m22:05:32.147300 [debug] [Thread-2 (]: Began compiling node model.ecommerce_analytics.stg_order_reviews
+[0m22:05:32.152432 [debug] [Thread-4 (]: Began running node model.ecommerce_analytics.stg_products
+[0m22:05:32.157734 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.stg_customers, now model.ecommerce_analytics.stg_orders)
+[0m22:05:32.161175 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.stg_order_items, now model.ecommerce_analytics.stg_product_category)
+[0m22:05:32.175469 [debug] [Thread-2 (]: Writing injected SQL for node "model.ecommerce_analytics.stg_order_reviews"
+[0m22:05:32.181924 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.stg_order_payments, now model.ecommerce_analytics.stg_products)
+[0m22:05:32.187372 [debug] [Thread-1 (]: Began compiling node model.ecommerce_analytics.stg_orders
+[0m22:05:32.192481 [debug] [Thread-3 (]: Began compiling node model.ecommerce_analytics.stg_product_category
+[0m22:05:32.199284 [debug] [Thread-4 (]: Began compiling node model.ecommerce_analytics.stg_products
+[0m22:05:32.211756 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_analytics.stg_orders"
+[0m22:05:32.224729 [debug] [Thread-3 (]: Writing injected SQL for node "model.ecommerce_analytics.stg_product_category"
+[0m22:05:32.253560 [debug] [Thread-4 (]: Writing injected SQL for node "model.ecommerce_analytics.stg_products"
+[0m22:05:32.260169 [debug] [Thread-2 (]: Began executing node model.ecommerce_analytics.stg_order_reviews
+[0m22:05:32.286875 [debug] [Thread-2 (]: Finished running node model.ecommerce_analytics.stg_order_reviews
+[0m22:05:32.298637 [debug] [Thread-2 (]: Began running node model.ecommerce_analytics.stg_sellers
+[0m22:05:32.302200 [debug] [Thread-1 (]: Began executing node model.ecommerce_analytics.stg_orders
+[0m22:05:32.316855 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.stg_order_reviews, now model.ecommerce_analytics.stg_sellers)
+[0m22:05:32.320587 [debug] [Thread-3 (]: Began executing node model.ecommerce_analytics.stg_product_category
+[0m22:05:32.343615 [debug] [Thread-4 (]: Began executing node model.ecommerce_analytics.stg_products
+[0m22:05:32.338268 [debug] [Thread-1 (]: Finished running node model.ecommerce_analytics.stg_orders
+[0m22:05:32.350997 [debug] [Thread-2 (]: Began compiling node model.ecommerce_analytics.stg_sellers
+[0m22:05:32.358949 [debug] [Thread-3 (]: Finished running node model.ecommerce_analytics.stg_product_category
+[0m22:05:32.365673 [debug] [Thread-4 (]: Finished running node model.ecommerce_analytics.stg_products
+[0m22:05:32.377003 [debug] [Thread-1 (]: Began running node model.ecommerce_analytics.int_location
+[0m22:05:32.409114 [debug] [Thread-2 (]: Writing injected SQL for node "model.ecommerce_analytics.stg_sellers"
+[0m22:05:32.411240 [debug] [Thread-3 (]: Began running node model.ecommerce_analytics.int_customers
+[0m22:05:32.414692 [debug] [Thread-4 (]: Began running node model.ecommerce_analytics.int_order_items
+[0m22:05:32.417446 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.stg_orders, now model.ecommerce_analytics.int_location)
+[0m22:05:32.421953 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.stg_product_category, now model.ecommerce_analytics.int_customers)
+[0m22:05:32.424969 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.stg_products, now model.ecommerce_analytics.int_order_items)
+[0m22:05:32.427544 [debug] [Thread-1 (]: Began compiling node model.ecommerce_analytics.int_location
+[0m22:05:32.430554 [debug] [Thread-3 (]: Began compiling node model.ecommerce_analytics.int_customers
+[0m22:05:32.433710 [debug] [Thread-4 (]: Began compiling node model.ecommerce_analytics.int_order_items
+[0m22:05:32.442548 [debug] [Thread-2 (]: Began executing node model.ecommerce_analytics.stg_sellers
+[0m22:05:32.445942 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_analytics.int_location"
+[0m22:05:32.451791 [debug] [Thread-3 (]: Writing injected SQL for node "model.ecommerce_analytics.int_customers"
+[0m22:05:32.484417 [debug] [Thread-2 (]: Finished running node model.ecommerce_analytics.stg_sellers
+[0m22:05:32.508695 [debug] [Thread-4 (]: Writing injected SQL for node "model.ecommerce_analytics.int_order_items"
+[0m22:05:32.514214 [debug] [Thread-2 (]: Began running node model.ecommerce_analytics.int_order_payments
+[0m22:05:32.520720 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.stg_sellers, now model.ecommerce_analytics.int_order_payments)
+[0m22:05:32.525185 [debug] [Thread-2 (]: Began compiling node model.ecommerce_analytics.int_order_payments
+[0m22:05:32.531647 [debug] [Thread-1 (]: Began executing node model.ecommerce_analytics.int_location
+[0m22:05:32.537774 [debug] [Thread-2 (]: Writing injected SQL for node "model.ecommerce_analytics.int_order_payments"
+[0m22:05:32.539251 [debug] [Thread-3 (]: Began executing node model.ecommerce_analytics.int_customers
+[0m22:05:32.544174 [debug] [Thread-1 (]: Finished running node model.ecommerce_analytics.int_location
+[0m22:05:32.545771 [debug] [Thread-4 (]: Began executing node model.ecommerce_analytics.int_order_items
+[0m22:05:32.551790 [debug] [Thread-3 (]: Finished running node model.ecommerce_analytics.int_customers
+[0m22:05:32.555327 [debug] [Thread-1 (]: Began running node model.ecommerce_analytics.int_order_reviews
+[0m22:05:32.560299 [debug] [Thread-4 (]: Finished running node model.ecommerce_analytics.int_order_items
+[0m22:05:32.563920 [debug] [Thread-3 (]: Began running node model.ecommerce_analytics.int_orders
+[0m22:05:32.566349 [debug] [Thread-2 (]: Began executing node model.ecommerce_analytics.int_order_payments
+[0m22:05:32.568958 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.int_location, now model.ecommerce_analytics.int_order_reviews)
+[0m22:05:32.572188 [debug] [Thread-4 (]: Began running node model.ecommerce_analytics.int_products
+[0m22:05:32.574729 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.int_customers, now model.ecommerce_analytics.int_orders)
+[0m22:05:32.578482 [debug] [Thread-2 (]: Finished running node model.ecommerce_analytics.int_order_payments
+[0m22:05:32.582248 [debug] [Thread-1 (]: Began compiling node model.ecommerce_analytics.int_order_reviews
+[0m22:05:32.652379 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.int_order_items, now model.ecommerce_analytics.int_products)
+[0m22:05:32.710922 [debug] [Thread-3 (]: Began compiling node model.ecommerce_analytics.int_orders
+[0m22:05:32.765358 [debug] [Thread-2 (]: Began running node model.ecommerce_analytics.int_sellers
+[0m22:05:32.793513 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_analytics.int_order_reviews"
+[0m22:05:32.804281 [debug] [Thread-4 (]: Began compiling node model.ecommerce_analytics.int_products
+[0m22:05:32.816527 [debug] [Thread-3 (]: Writing injected SQL for node "model.ecommerce_analytics.int_orders"
+[0m22:05:32.819872 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.int_order_payments, now model.ecommerce_analytics.int_sellers)
+[0m22:05:32.851772 [debug] [Thread-4 (]: Writing injected SQL for node "model.ecommerce_analytics.int_products"
+[0m22:05:32.875605 [debug] [Thread-2 (]: Began compiling node model.ecommerce_analytics.int_sellers
+[0m22:05:32.892627 [debug] [Thread-2 (]: Writing injected SQL for node "model.ecommerce_analytics.int_sellers"
+[0m22:05:32.900864 [debug] [Thread-1 (]: Began executing node model.ecommerce_analytics.int_order_reviews
+[0m22:05:32.904842 [debug] [Thread-3 (]: Began executing node model.ecommerce_analytics.int_orders
+[0m22:05:32.918355 [debug] [Thread-4 (]: Began executing node model.ecommerce_analytics.int_products
+[0m22:05:32.936643 [debug] [Thread-1 (]: Finished running node model.ecommerce_analytics.int_order_reviews
+[0m22:05:32.942222 [debug] [Thread-3 (]: Finished running node model.ecommerce_analytics.int_orders
+[0m22:05:32.943826 [debug] [Thread-2 (]: Began executing node model.ecommerce_analytics.int_sellers
+[0m22:05:32.968709 [debug] [Thread-2 (]: Finished running node model.ecommerce_analytics.int_sellers
+[0m22:05:32.957183 [debug] [Thread-1 (]: Began running node snapshot.ecommerce_analytics.snapshot_customers
+[0m22:05:32.960679 [debug] [Thread-3 (]: Began running node model.ecommerce_analytics.payment_dim
+[0m22:05:32.952936 [debug] [Thread-4 (]: Finished running node model.ecommerce_analytics.int_products
+[0m22:05:32.971612 [debug] [Thread-2 (]: Began running node model.ecommerce_analytics.reviews_dim
+[0m22:05:32.975035 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.int_order_reviews, now snapshot.ecommerce_analytics.snapshot_customers)
+[0m22:05:32.980645 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.int_orders, now model.ecommerce_analytics.payment_dim)
+[0m22:05:32.984317 [debug] [Thread-4 (]: Began running node model.ecommerce_analytics.order_fct
+[0m22:05:33.001292 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.int_products, now model.ecommerce_analytics.order_fct)
+[0m22:05:32.991663 [debug] [Thread-1 (]: Began compiling node snapshot.ecommerce_analytics.snapshot_customers
+[0m22:05:33.019136 [debug] [Thread-1 (]: Writing injected SQL for node "snapshot.ecommerce_analytics.snapshot_customers"
+[0m22:05:32.987921 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.int_sellers, now model.ecommerce_analytics.reviews_dim)
+[0m22:05:33.024962 [debug] [Thread-2 (]: Began compiling node model.ecommerce_analytics.reviews_dim
+[0m22:05:32.997515 [debug] [Thread-3 (]: Began compiling node model.ecommerce_analytics.payment_dim
+[0m22:05:33.004649 [debug] [Thread-4 (]: Began compiling node model.ecommerce_analytics.order_fct
+[0m22:05:33.038923 [debug] [Thread-2 (]: Writing injected SQL for node "model.ecommerce_analytics.reviews_dim"
+[0m22:05:33.069072 [debug] [Thread-3 (]: Writing injected SQL for node "model.ecommerce_analytics.payment_dim"
+[0m22:05:33.094952 [debug] [Thread-4 (]: Writing injected SQL for node "model.ecommerce_analytics.order_fct"
+[0m22:05:33.097038 [debug] [Thread-1 (]: Began executing node snapshot.ecommerce_analytics.snapshot_customers
+[0m22:05:33.109696 [debug] [Thread-1 (]: Finished running node snapshot.ecommerce_analytics.snapshot_customers
+[0m22:05:33.121222 [debug] [Thread-1 (]: Began running node snapshot.ecommerce_analytics.snapshot_sellers
+[0m22:05:33.140846 [debug] [Thread-3 (]: Began executing node model.ecommerce_analytics.payment_dim
+[0m22:05:33.143626 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly snapshot.ecommerce_analytics.snapshot_customers, now snapshot.ecommerce_analytics.snapshot_sellers)
+[0m22:05:33.166133 [debug] [Thread-1 (]: Began compiling node snapshot.ecommerce_analytics.snapshot_sellers
+[0m22:05:33.157383 [debug] [Thread-3 (]: Finished running node model.ecommerce_analytics.payment_dim
+[0m22:05:33.159956 [debug] [Thread-4 (]: Began executing node model.ecommerce_analytics.order_fct
+[0m22:05:33.145440 [debug] [Thread-2 (]: Began executing node model.ecommerce_analytics.reviews_dim
+[0m22:05:33.180300 [debug] [Thread-1 (]: Writing injected SQL for node "snapshot.ecommerce_analytics.snapshot_sellers"
+[0m22:05:33.186432 [debug] [Thread-3 (]: Began running node model.ecommerce_analytics.order_items_fct
+[0m22:05:33.212790 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.payment_dim, now model.ecommerce_analytics.order_items_fct)
+[0m22:05:33.241801 [debug] [Thread-3 (]: Began compiling node model.ecommerce_analytics.order_items_fct
+[0m22:05:33.193858 [debug] [Thread-4 (]: Finished running node model.ecommerce_analytics.order_fct
+[0m22:05:33.205066 [debug] [Thread-2 (]: Finished running node model.ecommerce_analytics.reviews_dim
+[0m22:05:33.306517 [debug] [Thread-3 (]: Writing injected SQL for node "model.ecommerce_analytics.order_items_fct"
+[0m22:05:33.323313 [debug] [Thread-4 (]: Began running node model.ecommerce_analytics.product_dim
+[0m22:05:33.338691 [debug] [Thread-2 (]: Began running node model.ecommerce_analytics.customer_dim
+[0m22:05:33.359140 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.reviews_dim, now model.ecommerce_analytics.customer_dim)
+[0m22:05:33.355350 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.order_fct, now model.ecommerce_analytics.product_dim)
+[0m22:05:33.393260 [debug] [Thread-2 (]: Began compiling node model.ecommerce_analytics.customer_dim
+[0m22:05:33.409327 [debug] [Thread-4 (]: Began compiling node model.ecommerce_analytics.product_dim
+[0m22:05:33.426422 [debug] [Thread-1 (]: Began executing node snapshot.ecommerce_analytics.snapshot_sellers
+[0m22:05:33.494261 [debug] [Thread-1 (]: Finished running node snapshot.ecommerce_analytics.snapshot_sellers
+[0m22:05:33.460997 [debug] [Thread-2 (]: Writing injected SQL for node "model.ecommerce_analytics.customer_dim"
+[0m22:05:33.474048 [debug] [Thread-4 (]: Writing injected SQL for node "model.ecommerce_analytics.product_dim"
+[0m22:05:33.459394 [debug] [Thread-3 (]: Began executing node model.ecommerce_analytics.order_items_fct
+[0m22:05:33.504327 [debug] [Thread-1 (]: Began running node model.ecommerce_analytics.seller_dim
+[0m22:05:33.576231 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly snapshot.ecommerce_analytics.snapshot_sellers, now model.ecommerce_analytics.seller_dim)
+[0m22:05:33.571070 [debug] [Thread-3 (]: Finished running node model.ecommerce_analytics.order_items_fct
+[0m22:05:33.595749 [debug] [Thread-1 (]: Began compiling node model.ecommerce_analytics.seller_dim
+[0m22:05:33.600619 [debug] [Thread-2 (]: Began executing node model.ecommerce_analytics.customer_dim
+[0m22:05:33.627220 [debug] [Thread-2 (]: Finished running node model.ecommerce_analytics.customer_dim
+[0m22:05:33.623459 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_analytics.seller_dim"
+[0m22:05:33.635517 [debug] [Thread-4 (]: Began executing node model.ecommerce_analytics.product_dim
+[0m22:05:33.645915 [debug] [Thread-4 (]: Finished running node model.ecommerce_analytics.product_dim
+[0m22:05:33.656628 [debug] [Thread-1 (]: Began executing node model.ecommerce_analytics.seller_dim
+[0m22:05:33.673186 [debug] [Thread-1 (]: Finished running node model.ecommerce_analytics.seller_dim
+[0m22:05:33.680284 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:05:33.684346 [debug] [MainThread]: Connection 'model.ecommerce_analytics.customer_dim' was properly closed.
+[0m22:05:33.687922 [debug] [MainThread]: Connection 'model.ecommerce_analytics.seller_dim' was properly closed.
+[0m22:05:33.691844 [debug] [MainThread]: Connection 'model.ecommerce_analytics.order_items_fct' was properly closed.
+[0m22:05:33.695315 [debug] [MainThread]: Connection 'model.ecommerce_analytics.product_dim' was properly closed.
+[0m22:05:33.713958 [debug] [MainThread]: Command end result
+[0m22:05:34.282223 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/dbt/target/manifest.json
+[0m22:05:34.301538 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/dbt/target/semantic_manifest.json
+[0m22:05:34.346795 [debug] [MainThread]: Wrote artifact OsiDocument to /usr/app/dbt/target/osi_document.json
+[0m22:05:34.381199 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/dbt/target/run_results.json
+[0m22:05:34.428422 [debug] [MainThread]: Acquiring new postgres connection 'generate_catalog'
+[0m22:05:34.430553 [info ] [MainThread]: Building catalog
+[0m22:05:34.486231 [debug] [ThreadPool]: Acquiring new postgres connection 'ecommerce_db.information_schema'
+[0m22:05:34.508255 [debug] [ThreadPool]: Using postgres connection "ecommerce_db.information_schema"
+[0m22:05:34.517964 [debug] [ThreadPool]: On ecommerce_db.information_schema: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "ecommerce-dbt-project", "target_name": "dev", "connection_name": "ecommerce_db.information_schema"} */
+
+    
+    
+
+    select
+        'ecommerce_db' as table_database,
+        sch.nspname as table_schema,
+        tbl.relname as table_name,
+        case tbl.relkind
+            when 'v' then 'VIEW'
+            when 'm' then 'MATERIALIZED VIEW'
+            else 'BASE TABLE'
+        end as table_type,
+        tbl_desc.description as table_comment,
+        col.attname as column_name,
+        col.attnum as column_index,
+        pg_catalog.format_type(col.atttypid, col.atttypmod) as column_type,
+        col_desc.description as column_comment,
+        pg_get_userbyid(tbl.relowner) as table_owner
+
+    from pg_catalog.pg_namespace sch
+    join pg_catalog.pg_class tbl on tbl.relnamespace = sch.oid
+    join pg_catalog.pg_attribute col on col.attrelid = tbl.oid
+    left outer join pg_catalog.pg_description tbl_desc on (tbl_desc.objoid = tbl.oid and tbl_desc.objsubid = 0)
+    left outer join pg_catalog.pg_description col_desc on (col_desc.objoid = tbl.oid and col_desc.objsubid = col.attnum)
+    where ((upper(sch.nspname) = upper('intermediate') and
+           upper(tbl.relname) = upper('int_order_items')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('stg_orders')) or (upper(sch.nspname) = upper('intermediate') and
+           upper(tbl.relname) = upper('int_order_reviews')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('stg_customers')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('stg_products')) or (upper(sch.nspname) = upper('intermediate') and
+           upper(tbl.relname) = upper('int_products')) or (upper(sch.nspname) = upper('snapshots') and
+           upper(tbl.relname) = upper('snapshot_sellers')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('order_items')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('geolocation')) or (upper(sch.nspname) = upper('marts') and
+           upper(tbl.relname) = upper('order_items_fct')) or (upper(sch.nspname) = upper('intermediate') and
+           upper(tbl.relname) = upper('int_customers')) or (upper(sch.nspname) = upper('marts') and
+           upper(tbl.relname) = upper('customer_dim')) or (upper(sch.nspname) = upper('marts') and
+           upper(tbl.relname) = upper('payment_dim')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('stg_order_items')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('product_category_name_translation')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('stg_order_payments')) or (upper(sch.nspname) = upper('intermediate') and
+           upper(tbl.relname) = upper('int_order_payments')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('order_reviews')) or (upper(sch.nspname) = upper('marts') and
+           upper(tbl.relname) = upper('seller_dim')) or (upper(sch.nspname) = upper('intermediate') and
+           upper(tbl.relname) = upper('int_sellers')) or (upper(sch.nspname) = upper('marts') and
+           upper(tbl.relname) = upper('product_dim')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('orders')) or (upper(sch.nspname) = upper('marts') and
+           upper(tbl.relname) = upper('order_fct')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('customers')) or (upper(sch.nspname) = upper('marts') and
+           upper(tbl.relname) = upper('reviews_dim')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('stg_sellers')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('order_payments')) or (upper(sch.nspname) = upper('snapshots') and
+           upper(tbl.relname) = upper('snapshot_customers')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('sellers')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('products')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('stg_location')) or (upper(sch.nspname) = upper('intermediate') and
+           upper(tbl.relname) = upper('int_location')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('stg_order_reviews')) or (upper(sch.nspname) = upper('intermediate') and
+           upper(tbl.relname) = upper('int_orders')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('stg_product_category')))
+      and not pg_is_other_temp_schema(sch.oid) -- not a temporary schema belonging to another session
+      and tbl.relpersistence in ('p', 'u') -- [p]ermanent table or [u]nlogged table. Exclude [t]emporary tables
+      and tbl.relkind in ('r', 'v', 'f', 'p', 'm') -- o[r]dinary table, [v]iew, [f]oreign table, [p]artitioned table, [m]aterialized view. Other values are [i]ndex, [S]equence, [c]omposite type, [t]OAST table
+      and col.attnum > 0 -- negative numbers are used for system columns such as oid
+      and not col.attisdropped -- column as not been dropped
+
+    order by
+        sch.nspname,
+        tbl.relname,
+        col.attnum
+[0m22:05:34.521391 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:05:34.589941 [debug] [ThreadPool]: SQL status: SELECT 236 in 0.068 seconds
+[0m22:05:34.623323 [debug] [ThreadPool]: On ecommerce_db.information_schema: ROLLBACK
+[0m22:05:34.626077 [debug] [ThreadPool]: On ecommerce_db.information_schema: Close
+[0m22:05:34.694877 [debug] [MainThread]: Wrote artifact CatalogArtifact to /usr/app/dbt/target/catalog.json
+[0m22:05:34.890417 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/dbt/target/manifest.json
+[0m22:05:34.909115 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/dbt/target/semantic_manifest.json
+[0m22:05:34.925634 [debug] [MainThread]: Wrote artifact OsiDocument to /usr/app/dbt/target/osi_document.json
+[0m22:05:34.928068 [info ] [MainThread]: Catalog written to /usr/app/dbt/target/catalog.json
+[0m22:05:34.935613 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": true, "command_wall_clock_time": 9.05324, "process_in_blocks": "0", "process_kernel_time": 1.187288, "process_mem_max_rss": "135196", "process_out_blocks": "0", "process_user_time": 9.234466}
+[0m22:05:34.939970 [debug] [MainThread]: Command `dbt docs generate` succeeded at 22:05:34.939341 after 9.06 seconds
+[0m22:05:34.942418 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m22:05:34.944487 [debug] [MainThread]: Connection 'ecommerce_db.information_schema' was properly closed.
+[0m22:05:34.946725 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f573f7480d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f573dc68e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f573df17850>]}
+[0m22:05:34.948916 [debug] [MainThread]: Flushing usage events
+[0m22:05:48.090407 [debug] [MainThread]: An error was encountered while trying to flush usage events
