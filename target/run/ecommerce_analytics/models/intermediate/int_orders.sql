@@ -22,6 +22,7 @@
 )
 
 select
+    md5(cast(coalesce(cast(order_id as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(customer_id as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(order_purchase_timestamp as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as order_pk,
     order_id,
     customer_id,
     order_status,

@@ -1,10 +1,10 @@
 with seller_snapshots as (
     select * from "ecommerce_db"."snapshots"."snapshot_sellers"
 )
-
+ 
 select
     -- Generate dynamic surrogate key for each dimensional revision
-    md5(cast(coalesce(cast(seller_id as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(dbt_valid_from as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as seller_pk,
+    md5(cast(coalesce(cast(seller_id as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(seller_zip_code_prefix as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(seller_city as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as seller_pk,
     seller_id,
     seller_zip_code_prefix,
     seller_city,

@@ -14,8 +14,9 @@ with products as (
 translations as (
     select * from "ecommerce_db"."raw"."stg_product_category"
 )
-
+ 
 select
+    md5(cast(coalesce(cast(product_id as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(p.product_category_name as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(p.product_name_length as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as product_pk,
     p.product_id,
     coalesce(t.product_category_name_english, p.product_category_name, 'unknown') as product_category_name,
     p.product_name_length,

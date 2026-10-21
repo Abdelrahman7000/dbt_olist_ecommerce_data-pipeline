@@ -8,4 +8,4 @@ with payment_det as(
 )
 
 select *
-from payment_det
+from payment_det 

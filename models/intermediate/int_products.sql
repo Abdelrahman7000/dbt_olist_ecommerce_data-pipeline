@@ -14,8 +14,9 @@ with products as (
 translations as (
     select * from {{ ref('stg_product_category') }}
 )
-
+ 
 select
+    {{ dbt_utils.generate_surrogate_key(['product_id', 'p.product_category_name','p.product_name_length']) }} as product_pk,
     p.product_id,
     coalesce(t.product_category_name_english, p.product_category_name, 'unknown') as product_category_name,
     p.product_name_length,

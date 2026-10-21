@@ -1,10 +1,10 @@
 with seller_snapshots as (
     select * from {{ ref('snapshot_sellers') }}
 )
-
+ 
 select
     -- Generate dynamic surrogate key for each dimensional revision
-    {{ dbt_utils.generate_surrogate_key(['seller_id', 'dbt_valid_from']) }} as seller_pk,
+    {{ dbt_utils.generate_surrogate_key(['seller_id', 'seller_zip_code_prefix','seller_city']) }} as seller_pk,
     seller_id,
     seller_zip_code_prefix,
     seller_city,

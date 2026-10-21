@@ -21,7 +21,7 @@
 )
 
 select
-    md5(cast(coalesce(cast(order_id as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(order_item_id as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as order_item_key,
+    md5(cast(coalesce(cast(order_id as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(order_item_id as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(product_id as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as order_item_key,
     order_id,
     order_item_id,
     seller_id,

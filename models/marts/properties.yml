@@ -1,0 +1,40 @@
+version: 2
+
+models:    
+  - name: customer_dim
+    #config:
+      #materialized: table
+      #schema: gold
+    description: >
+      Analytical dimension table capturing the evolving state of Olist's customer base,
+      including geographic, demographic, and behavioral attributes.
+    columns:
+      - name: customer_pk
+        description: "Customer Identifier key"
+        data_tests: # Updated to modern syntax!
+          - not_null
+          - unique
+
+      - name: customer_id
+        description: "Customer Id from the source."
+        data_tests:
+          - not_null
+  - name: payment_dim
+    #config:
+      #materialized: table
+      #schema: gold
+    description: >
+      Captures the payment methods and details associated with each customer, enabling analysis of payment trends and preferences.
+    columns:
+      - name: payment_det_pk
+        description: "Payment identifier"
+        data_tests: # Updated to modern syntax!
+          - not_null
+          - unique
+
+      - name: payment_type
+        description: "Available payment options"
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['not_defined', 'boleto', 'debit_card','credit_card','voucher']

@@ -1,5 +1,6 @@
 with customers as (
     select 
+        {{ dbt_utils.generate_surrogate_key(['customer_id', 'customer_unique_id','customer_zip_code_prefix','customer_city']) }} as customer_pk,
         customer_id,
         customer_unique_id,
         customer_zip_code_prefix,
@@ -8,4 +9,4 @@ with customers as (
     from {{ref('stg_customers') }}
 )
 
-select * from customers
+select * from customers 
