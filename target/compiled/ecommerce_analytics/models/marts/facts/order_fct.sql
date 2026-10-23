@@ -7,6 +7,9 @@
         md5(cast(coalesce(cast(o.order_id as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(o.customer_id as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(o.order_purchase_timestamp as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as order_pk,
         o.order_id,
         o.customer_id,
+        c.customer_pk,
+        r.review_pk,
+        p.payment_det_pk,
         o.order_status,
         o.order_purchase_timestamp,
         o.order_approved_at,
@@ -18,6 +21,9 @@
         o.estimated_delivery_days,
         o.is_delivery_delayed
     from "ecommerce_db"."intermediate"."int_orders" o
+    left join "ecommerce_db"."marts"."customer_dim" c using(customer_id)
+    left join "ecommerce_db"."marts"."reviews_dim" r using(order_id)
+    left join "ecommerce_db"."marts"."payment_dim" p using(order_id)
  ), 
   order_review_agg as (
     select 

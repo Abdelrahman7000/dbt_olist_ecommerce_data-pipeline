@@ -15,7 +15,10 @@ select
     {{ dbt_utils.generate_surrogate_key(['order_id', 'customer_id','order_purchase_timestamp']) }} as order_pk,
     order_id,
     customer_id,
-    order_status,
+    case 
+        when order_status = 'delivered' and order_delivered_customer_date is null then 'unavailable'
+        else order_status
+    end as order_status, 
     order_purchase_timestamp,
     order_approved_at,
     order_delivered_carrier_date,

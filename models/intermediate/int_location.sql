@@ -7,7 +7,15 @@ with location as (
         upper(geolocation_state) as geolocation_state
     FROM {{ ref('stg_location') }}
 )
-SELECT *
+SELECT
+     {{ dbt_utils.generate_surrogate_key([
+        'geolocation_zip_code_prefix',
+        'geolocation_lat',
+        'geolocation_lng',
+        'geolocation_city',
+        'geolocation_state'
+        ]) }} AS    location_pk,
+    *
 FROM location
 
 

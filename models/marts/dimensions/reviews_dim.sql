@@ -1,5 +1,6 @@
 with reviews as (
     select 
+        review_pk,
         review_id,
         order_id,
         review_score ,

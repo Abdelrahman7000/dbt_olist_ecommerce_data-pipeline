@@ -16,6 +16,12 @@ models:
         description: "Customer Id from the source."
         data_tests:
           - not_null
+  
+  - name: location_dim
+    description: >
+      An outrigger dimension that connects to the customer and seller dimensions, providing geographic context for analysis of customer and seller behavior across different regions.
+  
+  
   - name: payment_dim
     description: >
       Captures the payment methods and details associated with each customer, enabling analysis of payment trends and preferences.

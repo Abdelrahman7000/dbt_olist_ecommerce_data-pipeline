@@ -11,7 +11,7 @@ with order_items as (
 )
 
 select
-    {{ dbt_utils.generate_surrogate_key(['order_id', 'order_item_id','product_id'])}} as order_item_key,
+    {{ dbt_utils.generate_surrogate_key(['order_id', 'order_item_id','product_id'])}} as order_item_pk,
     order_id,
     order_item_id,
     seller_id,

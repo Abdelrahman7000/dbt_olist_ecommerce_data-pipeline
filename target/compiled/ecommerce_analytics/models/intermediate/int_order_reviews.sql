@@ -2,6 +2,7 @@
 
 with order_reviews as(
     select 
+         md5(cast(coalesce(cast(review_id as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(order_id as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as review_pk,
         review_id,
         order_id,
         review_score :: int,

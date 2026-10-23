@@ -1,0 +1,202 @@
+version: 2
+
+models:    
+  - name: int_customers
+    description: >
+      Intermediate customer model containing customer identifiers and customer location information.
+      Each record represents a customer and includes a surrogate primary key and the customer's original 
+      ID and ZIP-code prefix.
+    columns:
+      - name: customer_pk
+        description: Surrogate primary key uniquely identifying each customer record in the intermediate model.
+        data_tests: 
+          - not_null
+          - unique
+
+      - name: customer_id
+        description: >
+          Original customer identifier used to associate customers with their orders. 
+          Expected to be present for every record.
+        data_tests:
+          - not_null
+     
+      - name: customer_zip_code_prefix
+        description: >
+          ZIP-code prefix associated with the customer's location. Used to link customers to 
+          geographic information in int_location.
+        data_tests:
+          - not_null
+          #- relationships:
+           #   arguments:
+            #    to: ref('int_location')
+             #   field: geolocation_zip_code_prefix
+
+
+  - name: int_location
+    description: >
+      Intermediate location model containing geographic information associated with ZIP-code prefixes.
+       Provides a reference for connecting customer and seller locations to geographic data.
+    columns:
+      - name: geolocation_zip_code_prefix
+        description: >
+           ZIP-code prefix used to identify a geographic area and link customer and seller records 
+           to location information. Expected to be unique if this model contains one record per ZIP 
+           prefix.
+        data_tests: 
+          - not_null
+          
+
+
+  - name: int_order_items
+    description: >
+      Intermediate order-item model containing the individual products purchased within each order, 
+      the associated seller, the item price, and the freight charge. Each record represents an order 
+      line.
+    columns:
+      - name: order_id
+        description: >
+          Identifier of the order to which the item belongs. Links each order item to its parent order.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('int_orders')
+                field: order_id
+        
+      - name: product_id
+        description: >
+          Identifier of the product purchased in the order item. Links the order item to the 
+          corresponding product record.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('int_products')
+                field: product_id
+      
+      - name: seller_id
+        description: >
+          Identifier of the seller responsible for the order item. Links the item to the corresponding seller record.
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('int_sellers')
+                field: seller_id
+
+      - name: price
+        description: >
+          Price of the individual product in the order item, expressed in the source dataset's currency.
+        data_tests:
+         - positive_value
+
+      - name: freight_value
+        description: >
+          Freight or shipping charge associated with the order item, expressed in the source dataset's currency. 
+        data_tests:
+         - positive_value
+
+ 
+  - name: int_order_payments
+    description: >
+      Intermediate payment model containing payment information associated with customer orders, 
+      including the payment method and the value recorded for each payment transaction or installment.
+    columns:
+      - name: payment_type
+        description: Payment method used for the order payment, such as credit card, debit card, boleto, voucher, or an undefined payment type.
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['not_defined', 'boleto', 'debit_card','credit_card','voucher']
+      
+      - name: payment_value
+        description: Monetary value of the payment record, expressed in the source dataset's currency.
+        data_tests:
+         - positive_value
+
+  - name: int_order_reviews
+    description: >
+      Intermediate order-review model containing customer feedback and review identifiers 
+      associated with orders. Provides review records for analyzing customer satisfaction and 
+      order experience.
+    data_tests:
+      - valid_date_sequence:
+          arguments:
+            start_date: review_creation_date
+            end_date: review_answer_timestamp
+    columns:
+      - name: review_id
+        description: >
+           Identifier assigned to a review record. Expected to be present and unique if each review 
+           record has its own identifier.
+        data_tests: 
+          - not_null
+        
+
+  
+  - name: int_orders
+    description: >
+      Intermediate orders model containing order-level information, including the customer who 
+      placed the order and relevant order lifecycle timestamps. Supports analysis of order processing, 
+      delivery performance, and customer purchasing behavior.
+    data_tests:
+      - valid_date_sequence:
+          arguments:
+            start_date: order_purchase_timestamp
+            end_date: order_delivered_customer_date
+    
+    columns:
+      
+      - name: customer_id
+        description: Identifier of the customer who placed the order. Links each order to the corresponding customer record. 
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('int_customers')
+                field: customer_id
+
+
+  - name: int_products
+    description: >
+      Intermediate product model containing product identifiers and product-related attributes from 
+      the source data. Provides a reference for identifying products included in order items.
+    columns:
+      - name: product_pk
+        description: Surrogate primary key uniquely identifying a product record in the intermediate model.
+        data_tests: 
+          - not_null
+          - unique
+
+      - name: product_id
+        description: Original product identifier used to associate products with order items and other related records.
+        data_tests: 
+          - not_null
+          - unique
+    
+
+  - name: int_sellers
+    description: >
+       Intermediate seller model containing seller identifiers and location information. 
+       Provides a reference for connecting order items to the sellers responsible for fulfilling them.
+    columns:
+      - name: seller_pk
+        description:  Surrogate primary key uniquely identifying each seller record in the intermediate model.
+        data_tests: 
+          - not_null
+          - unique
+
+      - name: seller_id
+        description: Original seller identifier used to associate sellers with the order items they supply.
+        data_tests:
+          - not_null
+     
+      - name: seller_zip_code_prefix
+        description: ZIP-code prefix associated with the seller's location. Used to link the seller to geographic information in int_location.
+        data_tests:
+          - not_null
+          #- relationships:
+           #   arguments:
+            #    to: ref('int_location')
+             #   field: geolocation_zip_code_prefix
+

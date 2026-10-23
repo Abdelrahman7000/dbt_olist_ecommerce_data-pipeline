@@ -13,6 +13,9 @@
         {{ dbt_utils.generate_surrogate_key(['o.order_id', 'o.customer_id','o.order_purchase_timestamp']) }} as order_pk,
         o.order_id,
         o.customer_id,
+        c.customer_pk,
+        r.review_pk,
+        p.payment_det_pk,
         o.order_status,
         o.order_purchase_timestamp,
         o.order_approved_at,
@@ -24,6 +27,9 @@
         o.estimated_delivery_days,
         o.is_delivery_delayed
     from {{ ref('int_orders') }} o
+    left join {{ ref('customer_dim') }} c using(customer_id)
+    left join {{ ref('reviews_dim') }} r using(order_id)
+    left join {{ ref('payment_dim') }} p using(order_id)
  ), 
   order_review_agg as (
     select 
