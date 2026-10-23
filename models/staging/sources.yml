@@ -2,15 +2,121 @@ version: 2
 
 sources:
   - name: olist
+    description: >
+      Raw data from the Olist Brazilian e-commerce dataset,
+      containing information about customers, orders, payments,
+      reviews, products, sellers, and geolocation.
+
     database: ecommerce_db
     schema: raw
+    
     tables:
       - name: customers
+        description: "Customer information, including customer IDs and locations."
+        columns:
+          - name: customer_id
+            description: "Unique identifier for a customer."
+            data_tests:
+              - not_null
+              - unique
+          
+          - name: customer_unique_id
+            description: "Identifier that can link multiple customer records to the same customer."
+
+
       - name: geolocation
+        description: "Geographical coordinates associated with Brazilian ZIP codes."
+        columns:
+          - name: geolocation_zip_code_prefix
+            description: "First five digits of the ZIP code."
+      
       - name: order_items
+        description: "Products included in each order, including prices and freight."
+        columns:
+          - name: order_id
+            description: "Identifier of the order containing the item."
+            data_tests:
+              - not_null
+
+          - name: product_id
+            description: "Identifier of the purchased product."
+            data_tests:
+              - relationships:
+                  arguments:
+                    to: source('olist', 'products')
+                    field: product_id
+      
       - name: order_payments
+        description: "Payment information for customer orders."
+        columns:
+          - name: order_id
+            description: "Identifier of the order being paid for."
+            data_tests:
+              - not_null
+
+          - name: payment_value
+            description: "Value of the payment."
+
+      
       - name: order_reviews
+        description: "Customer reviews and satisfaction scores for orders."
+        columns:
+          - name: review_id
+            description: "Identifier of the review."
+
+          - name: review_score
+            description: "Customer rating, typically on a scale from 1 to 5."
+            data_tests:
+              - not_null
+              - accepted_values:
+                  arguments:
+                    values: [1, 2, 3, 4, 5]
+      
+      
       - name: orders
+        description: "Order records, including status and purchase and delivery timestamps."
+        columns:
+          - name: order_id
+            description: "Unique identifier for an order."
+            data_tests:
+              - not_null
+              - unique
+
+          - name: customer_id
+            description: "Identifier of the customer who placed the order."
+            data_tests:
+              - not_null
+
+          - name: order_status
+            description: "Current recorded status of the order."
+
+          - name: order_purchase_timestamp
+            description: "Timestamp when the order was placed."
+
+      
       - name: products
+        description: "Product attributes, dimensions, and category information."
+        columns:
+          - name: product_id
+            description: "Unique identifier for a product."
+            data_tests:
+              - not_null
+              - unique
+      
       - name: sellers
+        description: "Information about sellers participating in the marketplace."
+        columns:
+          - name: seller_id
+            description: "Unique identifier for a seller."
+            data_tests:
+              - not_null
+              - unique
+      
       - name: product_category_name_translation
+        description: "Mappings between Portuguese product category names and English translations."
+        columns:
+          - name: product_category_name
+            description: "Product category name in Portuguese."
+
+          - name: product_category_name_english
+            description: "Translated product category name in English."

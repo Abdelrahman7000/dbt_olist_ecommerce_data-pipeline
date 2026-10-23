@@ -2,16 +2,13 @@ version: 2
 
 models:    
   - name: customer_dim
-    #config:
-      #materialized: table
-      #schema: gold
     description: >
       Analytical dimension table capturing the evolving state of Olist's customer base,
       including geographic, demographic, and behavioral attributes.
     columns:
       - name: customer_pk
         description: "Customer Identifier key"
-        data_tests: # Updated to modern syntax!
+        data_tests: 
           - not_null
           - unique
 
@@ -20,15 +17,12 @@ models:
         data_tests:
           - not_null
   - name: payment_dim
-    #config:
-      #materialized: table
-      #schema: gold
     description: >
       Captures the payment methods and details associated with each customer, enabling analysis of payment trends and preferences.
     columns:
       - name: payment_det_pk
         description: "Payment identifier"
-        data_tests: # Updated to modern syntax!
+        data_tests: 
           - not_null
           - unique
 
@@ -38,3 +32,46 @@ models:
           - accepted_values:
               arguments:
                 values: ['not_defined', 'boleto', 'debit_card','credit_card','voucher']
+
+  - name: product_dim
+    description: >
+      Captures product related attributes.
+    columns:
+      - name: product_pk
+        description: "product created identifier"
+        data_tests: 
+          - not_null
+          - unique
+
+      - name: product_id
+        description: "product id generated created by the source"
+        data_tests:
+          - not_null
+  
+#  - name: reviews_dim
+#    #config:
+#      #materialized: table
+#      #schema: gold
+#    description: >
+#      Captures order reviews and reactions.
+#    columns:
+#      - name: review_id
+#        description: "review id created by the source"
+#        data_tests: 
+#          - not_null
+#          - unique
+      
+  - name: seller_dim
+    description: >
+      Focuses on seller-related attributes, including geographic location, business type, and performance metrics, to support seller analytics and insights.
+    columns:
+      - name: seller_pk
+        description: "seller Identifier key"
+        data_tests: 
+          - not_null
+          - unique
+
+      - name: seller_id
+        description: "seller id created by the source."
+        data_tests:
+          - not_null

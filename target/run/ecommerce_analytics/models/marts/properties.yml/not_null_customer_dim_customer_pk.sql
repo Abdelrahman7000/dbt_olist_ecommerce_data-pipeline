@@ -1,0 +1,25 @@
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_pk
+from "ecommerce_db"."marts"."customer_dim"
+where customer_pk is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
