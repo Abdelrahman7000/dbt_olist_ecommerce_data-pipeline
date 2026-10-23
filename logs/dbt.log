@@ -87605,3 +87605,819 @@ drop table if exists "ecommerce_db"."marts"."location_dim__dbt_backup" cascade
 [0m22:28:38.055904 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6738e22190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6738e216d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6738efca10>]}
 [0m22:28:38.058676 [debug] [MainThread]: Flushing usage events
 [0m22:28:39.148668 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:32:04.532131 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f138a5dc710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f138a70f790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f138a70f8d0>]}
+
+
+============================== 22:32:04.544425 | 1fe6749d-f4bf-43f0-bfa1-7e310c846621 ==============================
+[0m22:32:04.544425 [info ] [MainThread]: Running with dbt=1.12.5
+[0m22:32:04.550428 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'maximum_seed_size_mib': '1', 'empty': 'None', 'use_experimental_parser': 'False', 'printer_width': '80', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'introspect': 'True', 'version_check': 'True', 'fail_fast': 'False', 'partial_parse': 'True', 'target_path': 'None', 'cache_selected_only': 'False', 'static_parser': 'True', 'indirect_selection': 'eager', 'profiles_dir': '/usr/app/dbt', 'write_json': 'True', 'invocation_command': 'dbt docs generate', 'log_path': '/usr/app/dbt/logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'hints_enabled': 'True', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'log_format': 'default'}
+[0m22:32:05.220236 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1fe6749d-f4bf-43f0-bfa1-7e310c846621', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f138a452990>]}
+[0m22:32:05.477141 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1fe6749d-f4bf-43f0-bfa1-7e310c846621', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f138d805a10>]}
+[0m22:32:05.484123 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m22:32:05.855765 [debug] [MainThread]: checksum: 39348f98580677580056a0bb46f85cdaa9a8b6cd78ca138ccdf5cf0bc699d59b, vars: {}, profile: ecommerce-dbt-project, target: dev, version: 1.12.5
+[0m22:32:09.778107 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:32:09.783806 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m22:32:09.787329 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:32:09.887529 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1fe6749d-f4bf-43f0-bfa1-7e310c846621', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f138a4f3850>]}
+[0m22:32:10.301991 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1fe6749d-f4bf-43f0-bfa1-7e310c846621', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13897ff4d0>]}
+[0m22:32:10.304664 [info ] [MainThread]: Found 25 models, 2 snapshots, 55 data tests, 9 sources, 595 macros
+[0m22:32:10.308028 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1fe6749d-f4bf-43f0-bfa1-7e310c846621', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1389759590>]}
+[0m22:32:10.343434 [info ] [MainThread]: 
+[0m22:32:10.353281 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:32:10.370741 [info ] [MainThread]: 
+[0m22:32:10.384997 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m22:32:10.419279 [debug] [ThreadPool]: Acquiring new postgres connection 'list_ecommerce_db_intermediate'
+[0m22:32:10.421284 [debug] [ThreadPool]: Acquiring new postgres connection 'list_ecommerce_db_marts'
+[0m22:32:10.423009 [debug] [ThreadPool]: Acquiring new postgres connection 'list_ecommerce_db_snapshots'
+[0m22:32:10.424965 [debug] [ThreadPool]: Acquiring new postgres connection 'list_ecommerce_db_raw'
+[0m22:32:10.705270 [debug] [ThreadPool]: Using postgres connection "list_ecommerce_db_marts"
+[0m22:32:10.707515 [debug] [ThreadPool]: Using postgres connection "list_ecommerce_db_intermediate"
+[0m22:32:10.709322 [debug] [ThreadPool]: Using postgres connection "list_ecommerce_db_snapshots"
+[0m22:32:10.711146 [debug] [ThreadPool]: Using postgres connection "list_ecommerce_db_raw"
+[0m22:32:10.715512 [debug] [ThreadPool]: On list_ecommerce_db_marts: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "ecommerce-dbt-project", "target_name": "dev", "connection_name": "list_ecommerce_db_marts"} */
+select
+      'ecommerce_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'marts'
+    union all
+    select
+      'ecommerce_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'marts'
+    union all
+    select
+      'ecommerce_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'marts'
+    union all
+    select distinct
+     'ecommerce_db' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'marts'
+  
+[0m22:32:10.722873 [debug] [ThreadPool]: On list_ecommerce_db_intermediate: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "ecommerce-dbt-project", "target_name": "dev", "connection_name": "list_ecommerce_db_intermediate"} */
+select
+      'ecommerce_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'intermediate'
+    union all
+    select
+      'ecommerce_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'intermediate'
+    union all
+    select
+      'ecommerce_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'intermediate'
+    union all
+    select distinct
+     'ecommerce_db' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'intermediate'
+  
+[0m22:32:10.727101 [debug] [ThreadPool]: On list_ecommerce_db_snapshots: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "ecommerce-dbt-project", "target_name": "dev", "connection_name": "list_ecommerce_db_snapshots"} */
+select
+      'ecommerce_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'snapshots'
+    union all
+    select
+      'ecommerce_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'snapshots'
+    union all
+    select
+      'ecommerce_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'snapshots'
+    union all
+    select distinct
+     'ecommerce_db' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'snapshots'
+  
+[0m22:32:10.732323 [debug] [ThreadPool]: On list_ecommerce_db_raw: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "ecommerce-dbt-project", "target_name": "dev", "connection_name": "list_ecommerce_db_raw"} */
+select
+      'ecommerce_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw'
+    union all
+    select
+      'ecommerce_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw'
+    union all
+    select
+      'ecommerce_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw'
+    union all
+    select distinct
+     'ecommerce_db' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'raw'
+  
+[0m22:32:10.738338 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:32:10.741716 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:32:10.746072 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:32:10.749557 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:32:10.921366 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.175 seconds
+[0m22:32:10.923676 [debug] [ThreadPool]: SQL status: SELECT 18 in 0.174 seconds
+[0m22:32:10.935925 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.193 seconds
+[0m22:32:10.939503 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.188 seconds
+[0m22:32:10.957729 [debug] [ThreadPool]: On list_ecommerce_db_snapshots: ROLLBACK
+[0m22:32:10.975013 [debug] [ThreadPool]: On list_ecommerce_db_raw: ROLLBACK
+[0m22:32:10.992587 [debug] [ThreadPool]: On list_ecommerce_db_intermediate: ROLLBACK
+[0m22:32:11.009690 [debug] [ThreadPool]: On list_ecommerce_db_marts: ROLLBACK
+[0m22:32:11.020676 [debug] [ThreadPool]: On list_ecommerce_db_snapshots: Close
+[0m22:32:11.026402 [debug] [ThreadPool]: On list_ecommerce_db_raw: Close
+[0m22:32:11.032074 [debug] [ThreadPool]: On list_ecommerce_db_intermediate: Close
+[0m22:32:11.037643 [debug] [ThreadPool]: On list_ecommerce_db_marts: Close
+[0m22:32:11.154676 [debug] [MainThread]: Using postgres connection "master"
+[0m22:32:11.159929 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "ecommerce-dbt-project", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m22:32:11.166984 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:32:11.282190 [debug] [MainThread]: SQL status: SELECT 9 in 0.115 seconds
+[0m22:32:11.308543 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1fe6749d-f4bf-43f0-bfa1-7e310c846621', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1387b51190>]}
+[0m22:32:11.317706 [debug] [MainThread]: On master: ROLLBACK
+[0m22:32:11.322538 [debug] [MainThread]: On master: Close
+[0m22:32:11.363448 [debug] [Thread-1 (]: Began running node model.ecommerce_analytics.stg_customers
+[0m22:32:11.367111 [debug] [Thread-2 (]: Began running node model.ecommerce_analytics.stg_location
+[0m22:32:11.370533 [debug] [Thread-3 (]: Began running node model.ecommerce_analytics.stg_order_items
+[0m22:32:11.373015 [debug] [Thread-4 (]: Began running node model.ecommerce_analytics.stg_order_payments
+[0m22:32:11.377042 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_ecommerce_db_marts, now model.ecommerce_analytics.stg_customers)
+[0m22:32:11.385789 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_ecommerce_db_intermediate, now model.ecommerce_analytics.stg_location)
+[0m22:32:11.392766 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_ecommerce_db_raw, now model.ecommerce_analytics.stg_order_items)
+[0m22:32:11.400947 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly list_ecommerce_db_snapshots, now model.ecommerce_analytics.stg_order_payments)
+[0m22:32:11.406335 [debug] [Thread-1 (]: Began compiling node model.ecommerce_analytics.stg_customers
+[0m22:32:11.413838 [debug] [Thread-2 (]: Began compiling node model.ecommerce_analytics.stg_location
+[0m22:32:11.419925 [debug] [Thread-3 (]: Began compiling node model.ecommerce_analytics.stg_order_items
+[0m22:32:11.424489 [debug] [Thread-4 (]: Began compiling node model.ecommerce_analytics.stg_order_payments
+[0m22:32:11.500781 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_analytics.stg_customers"
+[0m22:32:11.491323 [debug] [Thread-2 (]: Writing injected SQL for node "model.ecommerce_analytics.stg_location"
+[0m22:32:11.520073 [debug] [Thread-3 (]: Writing injected SQL for node "model.ecommerce_analytics.stg_order_items"
+[0m22:32:11.536747 [debug] [Thread-4 (]: Writing injected SQL for node "model.ecommerce_analytics.stg_order_payments"
+[0m22:32:11.570652 [debug] [Thread-2 (]: Began executing node model.ecommerce_analytics.stg_location
+[0m22:32:11.575663 [debug] [Thread-4 (]: Began executing node model.ecommerce_analytics.stg_order_payments
+[0m22:32:11.580728 [debug] [Thread-1 (]: Began executing node model.ecommerce_analytics.stg_customers
+[0m22:32:11.589677 [debug] [Thread-2 (]: Finished running node model.ecommerce_analytics.stg_location
+[0m22:32:11.602310 [debug] [Thread-4 (]: Finished running node model.ecommerce_analytics.stg_order_payments
+[0m22:32:11.603997 [debug] [Thread-3 (]: Began executing node model.ecommerce_analytics.stg_order_items
+[0m22:32:11.608731 [debug] [Thread-1 (]: Finished running node model.ecommerce_analytics.stg_customers
+[0m22:32:11.616732 [debug] [Thread-2 (]: Began running node model.ecommerce_analytics.stg_order_reviews
+[0m22:32:11.620653 [debug] [Thread-4 (]: Began running node model.ecommerce_analytics.stg_orders
+[0m22:32:11.630681 [debug] [Thread-3 (]: Finished running node model.ecommerce_analytics.stg_order_items
+[0m22:32:11.634273 [debug] [Thread-1 (]: Began running node model.ecommerce_analytics.stg_product_category
+[0m22:32:11.636979 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.stg_location, now model.ecommerce_analytics.stg_order_reviews)
+[0m22:32:11.640070 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.stg_order_payments, now model.ecommerce_analytics.stg_orders)
+[0m22:32:11.648911 [debug] [Thread-3 (]: Began running node model.ecommerce_analytics.stg_products
+[0m22:32:11.653167 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.stg_customers, now model.ecommerce_analytics.stg_product_category)
+[0m22:32:11.660368 [debug] [Thread-2 (]: Began compiling node model.ecommerce_analytics.stg_order_reviews
+[0m22:32:11.666235 [debug] [Thread-4 (]: Began compiling node model.ecommerce_analytics.stg_orders
+[0m22:32:11.670173 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.stg_order_items, now model.ecommerce_analytics.stg_products)
+[0m22:32:11.673492 [debug] [Thread-1 (]: Began compiling node model.ecommerce_analytics.stg_product_category
+[0m22:32:11.682885 [debug] [Thread-2 (]: Writing injected SQL for node "model.ecommerce_analytics.stg_order_reviews"
+[0m22:32:11.692196 [debug] [Thread-4 (]: Writing injected SQL for node "model.ecommerce_analytics.stg_orders"
+[0m22:32:11.698945 [debug] [Thread-3 (]: Began compiling node model.ecommerce_analytics.stg_products
+[0m22:32:11.705772 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_analytics.stg_product_category"
+[0m22:32:11.725923 [debug] [Thread-3 (]: Writing injected SQL for node "model.ecommerce_analytics.stg_products"
+[0m22:32:11.740283 [debug] [Thread-2 (]: Began executing node model.ecommerce_analytics.stg_order_reviews
+[0m22:32:11.748815 [debug] [Thread-4 (]: Began executing node model.ecommerce_analytics.stg_orders
+[0m22:32:11.752195 [debug] [Thread-1 (]: Began executing node model.ecommerce_analytics.stg_product_category
+[0m22:32:11.756612 [debug] [Thread-2 (]: Finished running node model.ecommerce_analytics.stg_order_reviews
+[0m22:32:11.764743 [debug] [Thread-4 (]: Finished running node model.ecommerce_analytics.stg_orders
+[0m22:32:11.767349 [debug] [Thread-3 (]: Began executing node model.ecommerce_analytics.stg_products
+[0m22:32:11.770320 [debug] [Thread-1 (]: Finished running node model.ecommerce_analytics.stg_product_category
+[0m22:32:11.775398 [debug] [Thread-2 (]: Began running node model.ecommerce_analytics.stg_sellers
+[0m22:32:11.780106 [debug] [Thread-4 (]: Began running node test.ecommerce_analytics.source_accepted_values_olist_order_reviews_review_score__1__2__3__4__5.8ca67545d4
+[0m22:32:11.784511 [debug] [Thread-3 (]: Finished running node model.ecommerce_analytics.stg_products
+[0m22:32:11.788900 [debug] [Thread-1 (]: Began running node test.ecommerce_analytics.source_not_null_olist_customers_customer_id.1d007d2aad
+[0m22:32:11.792599 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.stg_order_reviews, now model.ecommerce_analytics.stg_sellers)
+[0m22:32:11.797110 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.stg_orders, now test.ecommerce_analytics.source_accepted_values_olist_order_reviews_review_score__1__2__3__4__5.8ca67545d4)
+[0m22:32:11.800497 [debug] [Thread-3 (]: Began running node test.ecommerce_analytics.source_not_null_olist_order_items_order_id.6a31f38874
+[0m22:32:11.803519 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.stg_product_category, now test.ecommerce_analytics.source_not_null_olist_customers_customer_id.1d007d2aad)
+[0m22:32:11.806579 [debug] [Thread-2 (]: Began compiling node model.ecommerce_analytics.stg_sellers
+[0m22:32:11.810220 [debug] [Thread-4 (]: Began compiling node test.ecommerce_analytics.source_accepted_values_olist_order_reviews_review_score__1__2__3__4__5.8ca67545d4
+[0m22:32:11.815459 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.stg_products, now test.ecommerce_analytics.source_not_null_olist_order_items_order_id.6a31f38874)
+[0m22:32:11.819179 [debug] [Thread-1 (]: Began compiling node test.ecommerce_analytics.source_not_null_olist_customers_customer_id.1d007d2aad
+[0m22:32:11.829900 [debug] [Thread-2 (]: Writing injected SQL for node "model.ecommerce_analytics.stg_sellers"
+[0m22:32:11.862709 [debug] [Thread-3 (]: Began compiling node test.ecommerce_analytics.source_not_null_olist_order_items_order_id.6a31f38874
+[0m22:32:11.879339 [debug] [Thread-4 (]: Writing injected SQL for node "test.ecommerce_analytics.source_accepted_values_olist_order_reviews_review_score__1__2__3__4__5.8ca67545d4"
+[0m22:32:11.925991 [debug] [Thread-1 (]: Writing injected SQL for node "test.ecommerce_analytics.source_not_null_olist_customers_customer_id.1d007d2aad"
+[0m22:32:12.069867 [debug] [Thread-3 (]: Writing injected SQL for node "test.ecommerce_analytics.source_not_null_olist_order_items_order_id.6a31f38874"
+[0m22:32:12.194603 [debug] [Thread-2 (]: Began executing node model.ecommerce_analytics.stg_sellers
+[0m22:32:12.195977 [debug] [Thread-4 (]: Began executing node test.ecommerce_analytics.source_accepted_values_olist_order_reviews_review_score__1__2__3__4__5.8ca67545d4
+[0m22:32:12.210715 [debug] [Thread-2 (]: Finished running node model.ecommerce_analytics.stg_sellers
+[0m22:32:12.215536 [debug] [Thread-4 (]: Finished running node test.ecommerce_analytics.source_accepted_values_olist_order_reviews_review_score__1__2__3__4__5.8ca67545d4
+[0m22:32:12.219026 [debug] [Thread-2 (]: Began running node test.ecommerce_analytics.source_not_null_olist_order_payments_order_id.a4075c58dc
+[0m22:32:12.223942 [debug] [Thread-4 (]: Began running node test.ecommerce_analytics.source_not_null_olist_order_reviews_review_score.8c5fc1b3d6
+[0m22:32:12.227408 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.stg_sellers, now test.ecommerce_analytics.source_not_null_olist_order_payments_order_id.a4075c58dc)
+[0m22:32:12.229105 [debug] [Thread-1 (]: Began executing node test.ecommerce_analytics.source_not_null_olist_customers_customer_id.1d007d2aad
+[0m22:32:12.231884 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.source_accepted_values_olist_order_reviews_review_score__1__2__3__4__5.8ca67545d4, now test.ecommerce_analytics.source_not_null_olist_order_reviews_review_score.8c5fc1b3d6)
+[0m22:32:12.234760 [debug] [Thread-2 (]: Began compiling node test.ecommerce_analytics.source_not_null_olist_order_payments_order_id.a4075c58dc
+[0m22:32:12.245934 [debug] [Thread-1 (]: Finished running node test.ecommerce_analytics.source_not_null_olist_customers_customer_id.1d007d2aad
+[0m22:32:12.250442 [debug] [Thread-3 (]: Began executing node test.ecommerce_analytics.source_not_null_olist_order_items_order_id.6a31f38874
+[0m22:32:12.252603 [debug] [Thread-4 (]: Began compiling node test.ecommerce_analytics.source_not_null_olist_order_reviews_review_score.8c5fc1b3d6
+[0m22:32:12.273505 [debug] [Thread-2 (]: Writing injected SQL for node "test.ecommerce_analytics.source_not_null_olist_order_payments_order_id.a4075c58dc"
+[0m22:32:12.275044 [debug] [Thread-1 (]: Began running node test.ecommerce_analytics.source_not_null_olist_orders_customer_id.916fd6aa26
+[0m22:32:12.279975 [debug] [Thread-3 (]: Finished running node test.ecommerce_analytics.source_not_null_olist_order_items_order_id.6a31f38874
+[0m22:32:12.301175 [debug] [Thread-4 (]: Writing injected SQL for node "test.ecommerce_analytics.source_not_null_olist_order_reviews_review_score.8c5fc1b3d6"
+[0m22:32:12.304508 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.source_not_null_olist_customers_customer_id.1d007d2aad, now test.ecommerce_analytics.source_not_null_olist_orders_customer_id.916fd6aa26)
+[0m22:32:12.307525 [debug] [Thread-3 (]: Began running node test.ecommerce_analytics.source_not_null_olist_orders_order_id.441189e023
+[0m22:32:12.317461 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.source_not_null_olist_order_items_order_id.6a31f38874, now test.ecommerce_analytics.source_not_null_olist_orders_order_id.441189e023)
+[0m22:32:12.313756 [debug] [Thread-1 (]: Began compiling node test.ecommerce_analytics.source_not_null_olist_orders_customer_id.916fd6aa26
+[0m22:32:12.320905 [debug] [Thread-3 (]: Began compiling node test.ecommerce_analytics.source_not_null_olist_orders_order_id.441189e023
+[0m22:32:12.322777 [debug] [Thread-4 (]: Began executing node test.ecommerce_analytics.source_not_null_olist_order_reviews_review_score.8c5fc1b3d6
+[0m22:32:12.326071 [debug] [Thread-2 (]: Began executing node test.ecommerce_analytics.source_not_null_olist_order_payments_order_id.a4075c58dc
+[0m22:32:12.349618 [debug] [Thread-1 (]: Writing injected SQL for node "test.ecommerce_analytics.source_not_null_olist_orders_customer_id.916fd6aa26"
+[0m22:32:12.370811 [debug] [Thread-3 (]: Writing injected SQL for node "test.ecommerce_analytics.source_not_null_olist_orders_order_id.441189e023"
+[0m22:32:12.373022 [debug] [Thread-4 (]: Finished running node test.ecommerce_analytics.source_not_null_olist_order_reviews_review_score.8c5fc1b3d6
+[0m22:32:12.377588 [debug] [Thread-2 (]: Finished running node test.ecommerce_analytics.source_not_null_olist_order_payments_order_id.a4075c58dc
+[0m22:32:12.384617 [debug] [Thread-4 (]: Began running node test.ecommerce_analytics.source_not_null_olist_products_product_id.93341440fa
+[0m22:32:12.388208 [debug] [Thread-2 (]: Began running node test.ecommerce_analytics.source_not_null_olist_sellers_seller_id.fc06a9f6bf
+[0m22:32:12.393366 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.source_not_null_olist_order_reviews_review_score.8c5fc1b3d6, now test.ecommerce_analytics.source_not_null_olist_products_product_id.93341440fa)
+[0m22:32:12.396846 [debug] [Thread-1 (]: Began executing node test.ecommerce_analytics.source_not_null_olist_orders_customer_id.916fd6aa26
+[0m22:32:12.399882 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.source_not_null_olist_order_payments_order_id.a4075c58dc, now test.ecommerce_analytics.source_not_null_olist_sellers_seller_id.fc06a9f6bf)
+[0m22:32:12.401495 [debug] [Thread-3 (]: Began executing node test.ecommerce_analytics.source_not_null_olist_orders_order_id.441189e023
+[0m22:32:12.403513 [debug] [Thread-4 (]: Began compiling node test.ecommerce_analytics.source_not_null_olist_products_product_id.93341440fa
+[0m22:32:12.406649 [debug] [Thread-1 (]: Finished running node test.ecommerce_analytics.source_not_null_olist_orders_customer_id.916fd6aa26
+[0m22:32:12.408833 [debug] [Thread-2 (]: Began compiling node test.ecommerce_analytics.source_not_null_olist_sellers_seller_id.fc06a9f6bf
+[0m22:32:12.413559 [debug] [Thread-3 (]: Finished running node test.ecommerce_analytics.source_not_null_olist_orders_order_id.441189e023
+[0m22:32:12.435775 [debug] [Thread-4 (]: Writing injected SQL for node "test.ecommerce_analytics.source_not_null_olist_products_product_id.93341440fa"
+[0m22:32:12.437847 [debug] [Thread-1 (]: Began running node test.ecommerce_analytics.source_relationships_olist_order_items_product_id__product_id__source_olist_products_.bf2f61056f
+[0m22:32:12.463927 [debug] [Thread-3 (]: Began running node test.ecommerce_analytics.source_unique_olist_customers_customer_id.efa71c64b9
+[0m22:32:12.466173 [debug] [Thread-2 (]: Writing injected SQL for node "test.ecommerce_analytics.source_not_null_olist_sellers_seller_id.fc06a9f6bf"
+[0m22:32:12.470848 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.source_not_null_olist_orders_customer_id.916fd6aa26, now test.ecommerce_analytics.source_relationships_olist_order_items_product_id__product_id__source_olist_products_.bf2f61056f)
+[0m22:32:12.473730 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.source_not_null_olist_orders_order_id.441189e023, now test.ecommerce_analytics.source_unique_olist_customers_customer_id.efa71c64b9)
+[0m22:32:12.491469 [debug] [Thread-1 (]: Began compiling node test.ecommerce_analytics.source_relationships_olist_order_items_product_id__product_id__source_olist_products_.bf2f61056f
+[0m22:32:12.495877 [debug] [Thread-3 (]: Began compiling node test.ecommerce_analytics.source_unique_olist_customers_customer_id.efa71c64b9
+[0m22:32:12.555417 [debug] [Thread-4 (]: Began executing node test.ecommerce_analytics.source_not_null_olist_products_product_id.93341440fa
+[0m22:32:12.590392 [debug] [Thread-3 (]: Writing injected SQL for node "test.ecommerce_analytics.source_unique_olist_customers_customer_id.efa71c64b9"
+[0m22:32:12.601479 [debug] [Thread-2 (]: Began executing node test.ecommerce_analytics.source_not_null_olist_sellers_seller_id.fc06a9f6bf
+[0m22:32:12.604859 [debug] [Thread-4 (]: Finished running node test.ecommerce_analytics.source_not_null_olist_products_product_id.93341440fa
+[0m22:32:12.619001 [debug] [Thread-1 (]: Writing injected SQL for node "test.ecommerce_analytics.source_relationships_olist_order_items_product_id__product_id__source_olist_products_.bf2f61056f"
+[0m22:32:12.627757 [debug] [Thread-2 (]: Finished running node test.ecommerce_analytics.source_not_null_olist_sellers_seller_id.fc06a9f6bf
+[0m22:32:12.631976 [debug] [Thread-4 (]: Began running node test.ecommerce_analytics.source_unique_olist_orders_order_id.df3b066d82
+[0m22:32:12.635839 [debug] [Thread-2 (]: Began running node test.ecommerce_analytics.source_unique_olist_products_product_id.b191d1f5aa
+[0m22:32:12.638461 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.source_not_null_olist_products_product_id.93341440fa, now test.ecommerce_analytics.source_unique_olist_orders_order_id.df3b066d82)
+[0m22:32:12.641010 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.source_not_null_olist_sellers_seller_id.fc06a9f6bf, now test.ecommerce_analytics.source_unique_olist_products_product_id.b191d1f5aa)
+[0m22:32:12.645512 [debug] [Thread-4 (]: Began compiling node test.ecommerce_analytics.source_unique_olist_orders_order_id.df3b066d82
+[0m22:32:12.649351 [debug] [Thread-2 (]: Began compiling node test.ecommerce_analytics.source_unique_olist_products_product_id.b191d1f5aa
+[0m22:32:12.673570 [debug] [Thread-3 (]: Began executing node test.ecommerce_analytics.source_unique_olist_customers_customer_id.efa71c64b9
+[0m22:32:12.682008 [debug] [Thread-4 (]: Writing injected SQL for node "test.ecommerce_analytics.source_unique_olist_orders_order_id.df3b066d82"
+[0m22:32:12.690016 [debug] [Thread-1 (]: Began executing node test.ecommerce_analytics.source_relationships_olist_order_items_product_id__product_id__source_olist_products_.bf2f61056f
+[0m22:32:12.714119 [debug] [Thread-2 (]: Writing injected SQL for node "test.ecommerce_analytics.source_unique_olist_products_product_id.b191d1f5aa"
+[0m22:32:12.716537 [debug] [Thread-3 (]: Finished running node test.ecommerce_analytics.source_unique_olist_customers_customer_id.efa71c64b9
+[0m22:32:12.724422 [debug] [Thread-1 (]: Finished running node test.ecommerce_analytics.source_relationships_olist_order_items_product_id__product_id__source_olist_products_.bf2f61056f
+[0m22:32:12.733600 [debug] [Thread-3 (]: Began running node test.ecommerce_analytics.source_unique_olist_sellers_seller_id.c8d4e16ad8
+[0m22:32:12.738061 [debug] [Thread-1 (]: Began running node model.ecommerce_analytics.int_location
+[0m22:32:12.747579 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.source_unique_olist_customers_customer_id.efa71c64b9, now test.ecommerce_analytics.source_unique_olist_sellers_seller_id.c8d4e16ad8)
+[0m22:32:12.750774 [debug] [Thread-4 (]: Began executing node test.ecommerce_analytics.source_unique_olist_orders_order_id.df3b066d82
+[0m22:32:12.753560 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.source_relationships_olist_order_items_product_id__product_id__source_olist_products_.bf2f61056f, now model.ecommerce_analytics.int_location)
+[0m22:32:12.756831 [debug] [Thread-2 (]: Began executing node test.ecommerce_analytics.source_unique_olist_products_product_id.b191d1f5aa
+[0m22:32:12.759727 [debug] [Thread-3 (]: Began compiling node test.ecommerce_analytics.source_unique_olist_sellers_seller_id.c8d4e16ad8
+[0m22:32:12.764992 [debug] [Thread-4 (]: Finished running node test.ecommerce_analytics.source_unique_olist_orders_order_id.df3b066d82
+[0m22:32:12.767484 [debug] [Thread-1 (]: Began compiling node model.ecommerce_analytics.int_location
+[0m22:32:12.770844 [debug] [Thread-2 (]: Finished running node test.ecommerce_analytics.source_unique_olist_products_product_id.b191d1f5aa
+[0m22:32:12.796451 [debug] [Thread-4 (]: Began running node model.ecommerce_analytics.int_order_payments
+[0m22:32:12.799952 [debug] [Thread-3 (]: Writing injected SQL for node "test.ecommerce_analytics.source_unique_olist_sellers_seller_id.c8d4e16ad8"
+[0m22:32:12.830629 [debug] [Thread-2 (]: Began running node model.ecommerce_analytics.int_customers
+[0m22:32:12.859346 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_analytics.int_location"
+[0m22:32:12.863725 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.source_unique_olist_orders_order_id.df3b066d82, now model.ecommerce_analytics.int_order_payments)
+[0m22:32:12.868442 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.source_unique_olist_products_product_id.b191d1f5aa, now model.ecommerce_analytics.int_customers)
+[0m22:32:12.875209 [debug] [Thread-4 (]: Began compiling node model.ecommerce_analytics.int_order_payments
+[0m22:32:12.881689 [debug] [Thread-2 (]: Began compiling node model.ecommerce_analytics.int_customers
+[0m22:32:12.891537 [debug] [Thread-3 (]: Began executing node test.ecommerce_analytics.source_unique_olist_sellers_seller_id.c8d4e16ad8
+[0m22:32:12.900570 [debug] [Thread-4 (]: Writing injected SQL for node "model.ecommerce_analytics.int_order_payments"
+[0m22:32:12.917188 [debug] [Thread-1 (]: Began executing node model.ecommerce_analytics.int_location
+[0m22:32:12.919705 [debug] [Thread-2 (]: Writing injected SQL for node "model.ecommerce_analytics.int_customers"
+[0m22:32:12.923157 [debug] [Thread-3 (]: Finished running node test.ecommerce_analytics.source_unique_olist_sellers_seller_id.c8d4e16ad8
+[0m22:32:12.930824 [debug] [Thread-1 (]: Finished running node model.ecommerce_analytics.int_location
+[0m22:32:12.935987 [debug] [Thread-3 (]: Began running node model.ecommerce_analytics.int_order_items
+[0m22:32:12.940240 [debug] [Thread-1 (]: Began running node model.ecommerce_analytics.int_order_reviews
+[0m22:32:12.947101 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.source_unique_olist_sellers_seller_id.c8d4e16ad8, now model.ecommerce_analytics.int_order_items)
+[0m22:32:12.949288 [debug] [Thread-4 (]: Began executing node model.ecommerce_analytics.int_order_payments
+[0m22:32:12.951285 [debug] [Thread-2 (]: Began executing node model.ecommerce_analytics.int_customers
+[0m22:32:12.953363 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.int_location, now model.ecommerce_analytics.int_order_reviews)
+[0m22:32:12.955783 [debug] [Thread-3 (]: Began compiling node model.ecommerce_analytics.int_order_items
+[0m22:32:12.960126 [debug] [Thread-4 (]: Finished running node model.ecommerce_analytics.int_order_payments
+[0m22:32:12.964650 [debug] [Thread-2 (]: Finished running node model.ecommerce_analytics.int_customers
+[0m22:32:12.967047 [debug] [Thread-1 (]: Began compiling node model.ecommerce_analytics.int_order_reviews
+[0m22:32:12.982079 [debug] [Thread-3 (]: Writing injected SQL for node "model.ecommerce_analytics.int_order_items"
+[0m22:32:12.984020 [debug] [Thread-4 (]: Began running node model.ecommerce_analytics.int_orders
+[0m22:32:12.987261 [debug] [Thread-2 (]: Began running node model.ecommerce_analytics.int_products
+[0m22:32:13.000600 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_analytics.int_order_reviews"
+[0m22:32:13.004625 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.int_order_payments, now model.ecommerce_analytics.int_orders)
+[0m22:32:13.007833 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.int_customers, now model.ecommerce_analytics.int_products)
+[0m22:32:13.013859 [debug] [Thread-4 (]: Began compiling node model.ecommerce_analytics.int_orders
+[0m22:32:13.017264 [debug] [Thread-2 (]: Began compiling node model.ecommerce_analytics.int_products
+[0m22:32:13.026700 [debug] [Thread-3 (]: Began executing node model.ecommerce_analytics.int_order_items
+[0m22:32:13.035069 [debug] [Thread-4 (]: Writing injected SQL for node "model.ecommerce_analytics.int_orders"
+[0m22:32:13.036455 [debug] [Thread-1 (]: Began executing node model.ecommerce_analytics.int_order_reviews
+[0m22:32:13.049314 [debug] [Thread-2 (]: Writing injected SQL for node "model.ecommerce_analytics.int_products"
+[0m22:32:13.052157 [debug] [Thread-3 (]: Finished running node model.ecommerce_analytics.int_order_items
+[0m22:32:13.057038 [debug] [Thread-1 (]: Finished running node model.ecommerce_analytics.int_order_reviews
+[0m22:32:13.062469 [debug] [Thread-3 (]: Began running node model.ecommerce_analytics.int_sellers
+[0m22:32:13.066127 [debug] [Thread-1 (]: Began running node model.ecommerce_analytics.location_dim
+[0m22:32:13.070170 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.int_order_items, now model.ecommerce_analytics.int_sellers)
+[0m22:32:13.073260 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.int_order_reviews, now model.ecommerce_analytics.location_dim)
+[0m22:32:13.077587 [debug] [Thread-3 (]: Began compiling node model.ecommerce_analytics.int_sellers
+[0m22:32:13.080789 [debug] [Thread-1 (]: Began compiling node model.ecommerce_analytics.location_dim
+[0m22:32:13.110290 [debug] [Thread-3 (]: Writing injected SQL for node "model.ecommerce_analytics.int_sellers"
+[0m22:32:13.120520 [debug] [Thread-2 (]: Began executing node model.ecommerce_analytics.int_products
+[0m22:32:13.122328 [debug] [Thread-4 (]: Began executing node model.ecommerce_analytics.int_orders
+[0m22:32:13.130036 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_analytics.location_dim"
+[0m22:32:13.135678 [debug] [Thread-2 (]: Finished running node model.ecommerce_analytics.int_products
+[0m22:32:13.142721 [debug] [Thread-4 (]: Finished running node model.ecommerce_analytics.int_orders
+[0m22:32:13.146979 [debug] [Thread-3 (]: Began executing node model.ecommerce_analytics.int_sellers
+[0m22:32:13.149900 [debug] [Thread-2 (]: Began running node test.ecommerce_analytics.not_null_int_location_geolocation_zip_code_prefix.1193d7045c
+[0m22:32:13.154419 [debug] [Thread-4 (]: Began running node model.ecommerce_analytics.payment_dim
+[0m22:32:13.160014 [debug] [Thread-3 (]: Finished running node model.ecommerce_analytics.int_sellers
+[0m22:32:13.163533 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.int_products, now test.ecommerce_analytics.not_null_int_location_geolocation_zip_code_prefix.1193d7045c)
+[0m22:32:13.165351 [debug] [Thread-1 (]: Began executing node model.ecommerce_analytics.location_dim
+[0m22:32:13.168033 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.int_orders, now model.ecommerce_analytics.payment_dim)
+[0m22:32:13.170713 [debug] [Thread-3 (]: Began running node test.ecommerce_analytics.accepted_values_int_order_payments_payment_type__not_defined__boleto__debit_card__credit_card__voucher.764592f5d7
+[0m22:32:13.174084 [debug] [Thread-2 (]: Began compiling node test.ecommerce_analytics.not_null_int_location_geolocation_zip_code_prefix.1193d7045c
+[0m22:32:13.177724 [debug] [Thread-1 (]: Finished running node model.ecommerce_analytics.location_dim
+[0m22:32:13.179946 [debug] [Thread-4 (]: Began compiling node model.ecommerce_analytics.payment_dim
+[0m22:32:13.182458 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.int_sellers, now test.ecommerce_analytics.accepted_values_int_order_payments_payment_type__not_defined__boleto__debit_card__credit_card__voucher.764592f5d7)
+[0m22:32:13.205833 [debug] [Thread-2 (]: Writing injected SQL for node "test.ecommerce_analytics.not_null_int_location_geolocation_zip_code_prefix.1193d7045c"
+[0m22:32:13.207242 [debug] [Thread-1 (]: Began running node test.ecommerce_analytics.positive_value_int_order_payments_payment_value.9014252e36
+[0m22:32:13.217963 [debug] [Thread-4 (]: Writing injected SQL for node "model.ecommerce_analytics.payment_dim"
+[0m22:32:13.220138 [debug] [Thread-3 (]: Began compiling node test.ecommerce_analytics.accepted_values_int_order_payments_payment_type__not_defined__boleto__debit_card__credit_card__voucher.764592f5d7
+[0m22:32:13.224678 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.location_dim, now test.ecommerce_analytics.positive_value_int_order_payments_payment_value.9014252e36)
+[0m22:32:13.253140 [debug] [Thread-1 (]: Began compiling node test.ecommerce_analytics.positive_value_int_order_payments_payment_value.9014252e36
+[0m22:32:13.261202 [debug] [Thread-2 (]: Began executing node test.ecommerce_analytics.not_null_int_location_geolocation_zip_code_prefix.1193d7045c
+[0m22:32:13.285921 [debug] [Thread-4 (]: Began executing node model.ecommerce_analytics.payment_dim
+[0m22:32:13.336836 [debug] [Thread-2 (]: Finished running node test.ecommerce_analytics.not_null_int_location_geolocation_zip_code_prefix.1193d7045c
+[0m22:32:13.338123 [debug] [Thread-1 (]: Writing injected SQL for node "test.ecommerce_analytics.positive_value_int_order_payments_payment_value.9014252e36"
+[0m22:32:13.366710 [debug] [Thread-4 (]: Finished running node model.ecommerce_analytics.payment_dim
+[0m22:32:13.396681 [debug] [Thread-2 (]: Began running node snapshot.ecommerce_analytics.snapshot_customers
+[0m22:32:13.397834 [debug] [Thread-3 (]: Writing injected SQL for node "test.ecommerce_analytics.accepted_values_int_order_payments_payment_type__not_defined__boleto__debit_card__credit_card__voucher.764592f5d7"
+[0m22:32:13.402792 [debug] [Thread-4 (]: Began running node test.ecommerce_analytics.not_null_int_customers_customer_id.ff6b6d8f00
+[0m22:32:13.406878 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_int_location_geolocation_zip_code_prefix.1193d7045c, now snapshot.ecommerce_analytics.snapshot_customers)
+[0m22:32:13.412068 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.payment_dim, now test.ecommerce_analytics.not_null_int_customers_customer_id.ff6b6d8f00)
+[0m22:32:13.415889 [debug] [Thread-2 (]: Began compiling node snapshot.ecommerce_analytics.snapshot_customers
+[0m22:32:13.429957 [debug] [Thread-1 (]: Began executing node test.ecommerce_analytics.positive_value_int_order_payments_payment_value.9014252e36
+[0m22:32:13.432562 [debug] [Thread-4 (]: Began compiling node test.ecommerce_analytics.not_null_int_customers_customer_id.ff6b6d8f00
+[0m22:32:13.435067 [debug] [Thread-3 (]: Began executing node test.ecommerce_analytics.accepted_values_int_order_payments_payment_type__not_defined__boleto__debit_card__credit_card__voucher.764592f5d7
+[0m22:32:13.444961 [debug] [Thread-2 (]: Writing injected SQL for node "snapshot.ecommerce_analytics.snapshot_customers"
+[0m22:32:13.448716 [debug] [Thread-1 (]: Finished running node test.ecommerce_analytics.positive_value_int_order_payments_payment_value.9014252e36
+[0m22:32:13.475080 [debug] [Thread-4 (]: Writing injected SQL for node "test.ecommerce_analytics.not_null_int_customers_customer_id.ff6b6d8f00"
+[0m22:32:13.479243 [debug] [Thread-3 (]: Finished running node test.ecommerce_analytics.accepted_values_int_order_payments_payment_type__not_defined__boleto__debit_card__credit_card__voucher.764592f5d7
+[0m22:32:13.483588 [debug] [Thread-1 (]: Began running node test.ecommerce_analytics.not_null_int_customers_customer_pk.afb42319ae
+[0m22:32:13.489609 [debug] [Thread-3 (]: Began running node test.ecommerce_analytics.not_null_int_customers_customer_zip_code_prefix.cbbc87135a
+[0m22:32:13.494520 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.positive_value_int_order_payments_payment_value.9014252e36, now test.ecommerce_analytics.not_null_int_customers_customer_pk.afb42319ae)
+[0m22:32:13.498139 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.accepted_values_int_order_payments_payment_type__not_defined__boleto__debit_card__credit_card__voucher.764592f5d7, now test.ecommerce_analytics.not_null_int_customers_customer_zip_code_prefix.cbbc87135a)
+[0m22:32:13.501786 [debug] [Thread-1 (]: Began compiling node test.ecommerce_analytics.not_null_int_customers_customer_pk.afb42319ae
+[0m22:32:13.504925 [debug] [Thread-3 (]: Began compiling node test.ecommerce_analytics.not_null_int_customers_customer_zip_code_prefix.cbbc87135a
+[0m22:32:13.514417 [debug] [Thread-4 (]: Began executing node test.ecommerce_analytics.not_null_int_customers_customer_id.ff6b6d8f00
+[0m22:32:13.536680 [debug] [Thread-1 (]: Writing injected SQL for node "test.ecommerce_analytics.not_null_int_customers_customer_pk.afb42319ae"
+[0m22:32:13.544357 [debug] [Thread-2 (]: Began executing node snapshot.ecommerce_analytics.snapshot_customers
+[0m22:32:13.564542 [debug] [Thread-4 (]: Finished running node test.ecommerce_analytics.not_null_int_customers_customer_id.ff6b6d8f00
+[0m22:32:13.567497 [debug] [Thread-3 (]: Writing injected SQL for node "test.ecommerce_analytics.not_null_int_customers_customer_zip_code_prefix.cbbc87135a"
+[0m22:32:13.573294 [debug] [Thread-2 (]: Finished running node snapshot.ecommerce_analytics.snapshot_customers
+[0m22:32:13.578753 [debug] [Thread-4 (]: Began running node test.ecommerce_analytics.unique_int_customers_customer_pk.d46a2dc994
+[0m22:32:13.585888 [debug] [Thread-2 (]: Began running node test.ecommerce_analytics.not_null_int_order_items_order_id.c5329651c5
+[0m22:32:13.598610 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_int_customers_customer_id.ff6b6d8f00, now test.ecommerce_analytics.unique_int_customers_customer_pk.d46a2dc994)
+[0m22:32:13.602643 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly snapshot.ecommerce_analytics.snapshot_customers, now test.ecommerce_analytics.not_null_int_order_items_order_id.c5329651c5)
+[0m22:32:13.606831 [debug] [Thread-4 (]: Began compiling node test.ecommerce_analytics.unique_int_customers_customer_pk.d46a2dc994
+[0m22:32:13.612912 [debug] [Thread-2 (]: Began compiling node test.ecommerce_analytics.not_null_int_order_items_order_id.c5329651c5
+[0m22:32:13.615251 [debug] [Thread-1 (]: Began executing node test.ecommerce_analytics.not_null_int_customers_customer_pk.afb42319ae
+[0m22:32:13.617162 [debug] [Thread-3 (]: Began executing node test.ecommerce_analytics.not_null_int_customers_customer_zip_code_prefix.cbbc87135a
+[0m22:32:13.666376 [debug] [Thread-4 (]: Writing injected SQL for node "test.ecommerce_analytics.unique_int_customers_customer_pk.d46a2dc994"
+[0m22:32:13.678194 [debug] [Thread-1 (]: Finished running node test.ecommerce_analytics.not_null_int_customers_customer_pk.afb42319ae
+[0m22:32:13.690389 [debug] [Thread-2 (]: Writing injected SQL for node "test.ecommerce_analytics.not_null_int_order_items_order_id.c5329651c5"
+[0m22:32:13.701442 [debug] [Thread-3 (]: Finished running node test.ecommerce_analytics.not_null_int_customers_customer_zip_code_prefix.cbbc87135a
+[0m22:32:13.720130 [debug] [Thread-1 (]: Began running node test.ecommerce_analytics.not_null_int_order_items_product_id.504071ca90
+[0m22:32:13.755273 [debug] [Thread-3 (]: Began running node test.ecommerce_analytics.not_null_int_order_items_seller_id.f5ded78779
+[0m22:32:13.770639 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_int_customers_customer_pk.afb42319ae, now test.ecommerce_analytics.not_null_int_order_items_product_id.504071ca90)
+[0m22:32:13.789929 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_int_customers_customer_zip_code_prefix.cbbc87135a, now test.ecommerce_analytics.not_null_int_order_items_seller_id.f5ded78779)
+[0m22:32:13.805139 [debug] [Thread-1 (]: Began compiling node test.ecommerce_analytics.not_null_int_order_items_product_id.504071ca90
+[0m22:32:13.809708 [debug] [Thread-2 (]: Began executing node test.ecommerce_analytics.not_null_int_order_items_order_id.c5329651c5
+[0m22:32:13.823694 [debug] [Thread-3 (]: Began compiling node test.ecommerce_analytics.not_null_int_order_items_seller_id.f5ded78779
+[0m22:32:13.828024 [debug] [Thread-4 (]: Began executing node test.ecommerce_analytics.unique_int_customers_customer_pk.d46a2dc994
+[0m22:32:13.880620 [debug] [Thread-2 (]: Finished running node test.ecommerce_analytics.not_null_int_order_items_order_id.c5329651c5
+[0m22:32:13.892843 [debug] [Thread-1 (]: Writing injected SQL for node "test.ecommerce_analytics.not_null_int_order_items_product_id.504071ca90"
+[0m22:32:13.997019 [debug] [Thread-3 (]: Writing injected SQL for node "test.ecommerce_analytics.not_null_int_order_items_seller_id.f5ded78779"
+[0m22:32:14.143977 [debug] [Thread-4 (]: Finished running node test.ecommerce_analytics.unique_int_customers_customer_pk.d46a2dc994
+[0m22:32:14.205756 [debug] [Thread-2 (]: Began running node test.ecommerce_analytics.positive_value_int_order_items_freight_value.30fc9aa741
+[0m22:32:14.314348 [debug] [Thread-4 (]: Began running node test.ecommerce_analytics.positive_value_int_order_items_price.d728007903
+[0m22:32:14.357598 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_int_order_items_order_id.c5329651c5, now test.ecommerce_analytics.positive_value_int_order_items_freight_value.30fc9aa741)
+[0m22:32:14.399654 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.unique_int_customers_customer_pk.d46a2dc994, now test.ecommerce_analytics.positive_value_int_order_items_price.d728007903)
+[0m22:32:14.431131 [debug] [Thread-2 (]: Began compiling node test.ecommerce_analytics.positive_value_int_order_items_freight_value.30fc9aa741
+[0m22:32:14.480243 [debug] [Thread-4 (]: Began compiling node test.ecommerce_analytics.positive_value_int_order_items_price.d728007903
+[0m22:32:14.488968 [debug] [Thread-1 (]: Began executing node test.ecommerce_analytics.not_null_int_order_items_product_id.504071ca90
+[0m22:32:14.601981 [debug] [Thread-2 (]: Writing injected SQL for node "test.ecommerce_analytics.positive_value_int_order_items_freight_value.30fc9aa741"
+[0m22:32:14.677536 [debug] [Thread-3 (]: Began executing node test.ecommerce_analytics.not_null_int_order_items_seller_id.f5ded78779
+[0m22:32:14.706566 [debug] [Thread-4 (]: Writing injected SQL for node "test.ecommerce_analytics.positive_value_int_order_items_price.d728007903"
+[0m22:32:14.720472 [debug] [Thread-1 (]: Finished running node test.ecommerce_analytics.not_null_int_order_items_product_id.504071ca90
+[0m22:32:14.785244 [debug] [Thread-3 (]: Finished running node test.ecommerce_analytics.not_null_int_order_items_seller_id.f5ded78779
+[0m22:32:14.878046 [debug] [Thread-1 (]: Began running node model.ecommerce_analytics.reviews_dim
+[0m22:32:14.884665 [debug] [Thread-3 (]: Began running node test.ecommerce_analytics.not_null_int_order_reviews_review_id.8b7305a0db
+[0m22:32:14.889520 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_int_order_items_product_id.504071ca90, now model.ecommerce_analytics.reviews_dim)
+[0m22:32:14.898992 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_int_order_items_seller_id.f5ded78779, now test.ecommerce_analytics.not_null_int_order_reviews_review_id.8b7305a0db)
+[0m22:32:14.906474 [debug] [Thread-1 (]: Began compiling node model.ecommerce_analytics.reviews_dim
+[0m22:32:14.914205 [debug] [Thread-2 (]: Began executing node test.ecommerce_analytics.positive_value_int_order_items_freight_value.30fc9aa741
+[0m22:32:14.922922 [debug] [Thread-3 (]: Began compiling node test.ecommerce_analytics.not_null_int_order_reviews_review_id.8b7305a0db
+[0m22:32:15.013960 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_analytics.reviews_dim"
+[0m22:32:15.022785 [debug] [Thread-4 (]: Began executing node test.ecommerce_analytics.positive_value_int_order_items_price.d728007903
+[0m22:32:15.028849 [debug] [Thread-2 (]: Finished running node test.ecommerce_analytics.positive_value_int_order_items_freight_value.30fc9aa741
+[0m22:32:15.071433 [debug] [Thread-3 (]: Writing injected SQL for node "test.ecommerce_analytics.not_null_int_order_reviews_review_id.8b7305a0db"
+[0m22:32:15.075979 [debug] [Thread-4 (]: Finished running node test.ecommerce_analytics.positive_value_int_order_items_price.d728007903
+[0m22:32:15.078586 [debug] [Thread-2 (]: Began running node test.ecommerce_analytics.valid_date_sequence_int_order_reviews_review_answer_timestamp__review_creation_date.eb79a820c5
+[0m22:32:15.082138 [debug] [Thread-4 (]: Began running node model.ecommerce_analytics.product_dim
+[0m22:32:15.085062 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.positive_value_int_order_items_freight_value.30fc9aa741, now test.ecommerce_analytics.valid_date_sequence_int_order_reviews_review_answer_timestamp__review_creation_date.eb79a820c5)
+[0m22:32:15.088421 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.positive_value_int_order_items_price.d728007903, now model.ecommerce_analytics.product_dim)
+[0m22:32:15.093047 [debug] [Thread-1 (]: Began executing node model.ecommerce_analytics.reviews_dim
+[0m22:32:15.097212 [debug] [Thread-2 (]: Began compiling node test.ecommerce_analytics.valid_date_sequence_int_order_reviews_review_answer_timestamp__review_creation_date.eb79a820c5
+[0m22:32:15.098834 [debug] [Thread-3 (]: Began executing node test.ecommerce_analytics.not_null_int_order_reviews_review_id.8b7305a0db
+[0m22:32:15.100758 [debug] [Thread-4 (]: Began compiling node model.ecommerce_analytics.product_dim
+[0m22:32:15.104009 [debug] [Thread-1 (]: Finished running node model.ecommerce_analytics.reviews_dim
+[0m22:32:15.134882 [debug] [Thread-3 (]: Finished running node test.ecommerce_analytics.not_null_int_order_reviews_review_id.8b7305a0db
+[0m22:32:15.167272 [debug] [Thread-2 (]: Writing injected SQL for node "test.ecommerce_analytics.valid_date_sequence_int_order_reviews_review_answer_timestamp__review_creation_date.eb79a820c5"
+[0m22:32:15.183188 [debug] [Thread-4 (]: Writing injected SQL for node "model.ecommerce_analytics.product_dim"
+[0m22:32:15.186506 [debug] [Thread-1 (]: Began running node test.ecommerce_analytics.not_null_int_products_product_id.029d46d600
+[0m22:32:15.189953 [debug] [Thread-3 (]: Began running node test.ecommerce_analytics.not_null_int_products_product_pk.5c824fddd5
+[0m22:32:15.202679 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.reviews_dim, now test.ecommerce_analytics.not_null_int_products_product_id.029d46d600)
+[0m22:32:15.207749 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_int_order_reviews_review_id.8b7305a0db, now test.ecommerce_analytics.not_null_int_products_product_pk.5c824fddd5)
+[0m22:32:15.214048 [debug] [Thread-1 (]: Began compiling node test.ecommerce_analytics.not_null_int_products_product_id.029d46d600
+[0m22:32:15.221368 [debug] [Thread-4 (]: Began executing node model.ecommerce_analytics.product_dim
+[0m22:32:15.223697 [debug] [Thread-3 (]: Began compiling node test.ecommerce_analytics.not_null_int_products_product_pk.5c824fddd5
+[0m22:32:15.227471 [debug] [Thread-2 (]: Began executing node test.ecommerce_analytics.valid_date_sequence_int_order_reviews_review_answer_timestamp__review_creation_date.eb79a820c5
+[0m22:32:15.265268 [debug] [Thread-4 (]: Finished running node model.ecommerce_analytics.product_dim
+[0m22:32:15.270168 [debug] [Thread-1 (]: Writing injected SQL for node "test.ecommerce_analytics.not_null_int_products_product_id.029d46d600"
+[0m22:32:15.302452 [debug] [Thread-3 (]: Writing injected SQL for node "test.ecommerce_analytics.not_null_int_products_product_pk.5c824fddd5"
+[0m22:32:15.304544 [debug] [Thread-2 (]: Finished running node test.ecommerce_analytics.valid_date_sequence_int_order_reviews_review_answer_timestamp__review_creation_date.eb79a820c5
+[0m22:32:15.333623 [debug] [Thread-2 (]: Began running node test.ecommerce_analytics.unique_int_products_product_id.5dc1150535
+[0m22:32:15.310640 [debug] [Thread-4 (]: Began running node test.ecommerce_analytics.relationships_int_order_items_product_id__product_id__ref_int_products_.c9980830fb
+[0m22:32:15.337456 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.valid_date_sequence_int_order_reviews_review_answer_timestamp__review_creation_date.eb79a820c5, now test.ecommerce_analytics.unique_int_products_product_id.5dc1150535)
+[0m22:32:15.345733 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.product_dim, now test.ecommerce_analytics.relationships_int_order_items_product_id__product_id__ref_int_products_.c9980830fb)
+[0m22:32:15.357274 [debug] [Thread-4 (]: Began compiling node test.ecommerce_analytics.relationships_int_order_items_product_id__product_id__ref_int_products_.c9980830fb
+[0m22:32:15.354150 [debug] [Thread-3 (]: Began executing node test.ecommerce_analytics.not_null_int_products_product_pk.5c824fddd5
+[0m22:32:15.350032 [debug] [Thread-2 (]: Began compiling node test.ecommerce_analytics.unique_int_products_product_id.5dc1150535
+[0m22:32:15.365685 [debug] [Thread-1 (]: Began executing node test.ecommerce_analytics.not_null_int_products_product_id.029d46d600
+[0m22:32:15.400087 [debug] [Thread-3 (]: Finished running node test.ecommerce_analytics.not_null_int_products_product_pk.5c824fddd5
+[0m22:32:15.416241 [debug] [Thread-4 (]: Writing injected SQL for node "test.ecommerce_analytics.relationships_int_order_items_product_id__product_id__ref_int_products_.c9980830fb"
+[0m22:32:15.438954 [debug] [Thread-2 (]: Writing injected SQL for node "test.ecommerce_analytics.unique_int_products_product_id.5dc1150535"
+[0m22:32:15.442656 [debug] [Thread-1 (]: Finished running node test.ecommerce_analytics.not_null_int_products_product_id.029d46d600
+[0m22:32:15.446289 [debug] [Thread-3 (]: Began running node test.ecommerce_analytics.unique_int_products_product_pk.f310972bcc
+[0m22:32:15.451959 [debug] [Thread-1 (]: Began running node test.ecommerce_analytics.not_null_int_orders_customer_id.e78a71eed3
+[0m22:32:15.455497 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_int_products_product_pk.5c824fddd5, now test.ecommerce_analytics.unique_int_products_product_pk.f310972bcc)
+[0m22:32:15.459881 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_int_products_product_id.029d46d600, now test.ecommerce_analytics.not_null_int_orders_customer_id.e78a71eed3)
+[0m22:32:15.465329 [debug] [Thread-3 (]: Began compiling node test.ecommerce_analytics.unique_int_products_product_pk.f310972bcc
+[0m22:32:15.467950 [debug] [Thread-4 (]: Began executing node test.ecommerce_analytics.relationships_int_order_items_product_id__product_id__ref_int_products_.c9980830fb
+[0m22:32:15.471137 [debug] [Thread-2 (]: Began executing node test.ecommerce_analytics.unique_int_products_product_id.5dc1150535
+[0m22:32:15.472972 [debug] [Thread-1 (]: Began compiling node test.ecommerce_analytics.not_null_int_orders_customer_id.e78a71eed3
+[0m22:32:15.508045 [debug] [Thread-4 (]: Finished running node test.ecommerce_analytics.relationships_int_order_items_product_id__product_id__ref_int_products_.c9980830fb
+[0m22:32:15.509758 [debug] [Thread-3 (]: Writing injected SQL for node "test.ecommerce_analytics.unique_int_products_product_pk.f310972bcc"
+[0m22:32:15.514432 [debug] [Thread-2 (]: Finished running node test.ecommerce_analytics.unique_int_products_product_id.5dc1150535
+[0m22:32:15.537053 [debug] [Thread-1 (]: Writing injected SQL for node "test.ecommerce_analytics.not_null_int_orders_customer_id.e78a71eed3"
+[0m22:32:15.538791 [debug] [Thread-4 (]: Began running node test.ecommerce_analytics.relationships_int_order_items_order_id__order_id__ref_int_orders_.a164fa419f
+[0m22:32:15.544852 [debug] [Thread-2 (]: Began running node test.ecommerce_analytics.relationships_int_orders_customer_id__customer_id__ref_int_customers_.dbe4d365e1
+[0m22:32:15.550011 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.relationships_int_order_items_product_id__product_id__ref_int_products_.c9980830fb, now test.ecommerce_analytics.relationships_int_order_items_order_id__order_id__ref_int_orders_.a164fa419f)
+[0m22:32:15.554071 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.unique_int_products_product_id.5dc1150535, now test.ecommerce_analytics.relationships_int_orders_customer_id__customer_id__ref_int_customers_.dbe4d365e1)
+[0m22:32:15.555972 [debug] [Thread-3 (]: Began executing node test.ecommerce_analytics.unique_int_products_product_pk.f310972bcc
+[0m22:32:15.558776 [debug] [Thread-1 (]: Began executing node test.ecommerce_analytics.not_null_int_orders_customer_id.e78a71eed3
+[0m22:32:15.561923 [debug] [Thread-4 (]: Began compiling node test.ecommerce_analytics.relationships_int_order_items_order_id__order_id__ref_int_orders_.a164fa419f
+[0m22:32:15.564582 [debug] [Thread-2 (]: Began compiling node test.ecommerce_analytics.relationships_int_orders_customer_id__customer_id__ref_int_customers_.dbe4d365e1
+[0m22:32:15.567755 [debug] [Thread-3 (]: Finished running node test.ecommerce_analytics.unique_int_products_product_pk.f310972bcc
+[0m22:32:15.570819 [debug] [Thread-1 (]: Finished running node test.ecommerce_analytics.not_null_int_orders_customer_id.e78a71eed3
+[0m22:32:15.638445 [debug] [Thread-4 (]: Writing injected SQL for node "test.ecommerce_analytics.relationships_int_order_items_order_id__order_id__ref_int_orders_.a164fa419f"
+[0m22:32:15.645974 [debug] [Thread-3 (]: Began running node test.ecommerce_analytics.valid_date_sequence_int_orders_order_delivered_customer_date__order_purchase_timestamp.a3192b0fae
+[0m22:32:15.674213 [debug] [Thread-1 (]: Began running node model.ecommerce_analytics.order_items_fct
+[0m22:32:15.684908 [debug] [Thread-2 (]: Writing injected SQL for node "test.ecommerce_analytics.relationships_int_orders_customer_id__customer_id__ref_int_customers_.dbe4d365e1"
+[0m22:32:15.688714 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.unique_int_products_product_pk.f310972bcc, now test.ecommerce_analytics.valid_date_sequence_int_orders_order_delivered_customer_date__order_purchase_timestamp.a3192b0fae)
+[0m22:32:15.714828 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_int_orders_customer_id.e78a71eed3, now model.ecommerce_analytics.order_items_fct)
+[0m22:32:15.736151 [debug] [Thread-3 (]: Began compiling node test.ecommerce_analytics.valid_date_sequence_int_orders_order_delivered_customer_date__order_purchase_timestamp.a3192b0fae
+[0m22:32:15.748349 [debug] [Thread-1 (]: Began compiling node model.ecommerce_analytics.order_items_fct
+[0m22:32:15.772081 [debug] [Thread-4 (]: Began executing node test.ecommerce_analytics.relationships_int_order_items_order_id__order_id__ref_int_orders_.a164fa419f
+[0m22:32:15.817481 [debug] [Thread-2 (]: Began executing node test.ecommerce_analytics.relationships_int_orders_customer_id__customer_id__ref_int_customers_.dbe4d365e1
+[0m22:32:15.871037 [debug] [Thread-4 (]: Finished running node test.ecommerce_analytics.relationships_int_order_items_order_id__order_id__ref_int_orders_.a164fa419f
+[0m22:32:16.020961 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_analytics.order_items_fct"
+[0m22:32:16.023624 [debug] [Thread-2 (]: Finished running node test.ecommerce_analytics.relationships_int_orders_customer_id__customer_id__ref_int_customers_.dbe4d365e1
+[0m22:32:16.049950 [debug] [Thread-4 (]: Began running node snapshot.ecommerce_analytics.snapshot_sellers
+[0m22:32:16.047794 [debug] [Thread-3 (]: Writing injected SQL for node "test.ecommerce_analytics.valid_date_sequence_int_orders_order_delivered_customer_date__order_purchase_timestamp.a3192b0fae"
+[0m22:32:16.061360 [debug] [Thread-2 (]: Began running node test.ecommerce_analytics.not_null_int_sellers_seller_id.53a9cec43d
+[0m22:32:16.069493 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.relationships_int_order_items_order_id__order_id__ref_int_orders_.a164fa419f, now snapshot.ecommerce_analytics.snapshot_sellers)
+[0m22:32:16.079403 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.relationships_int_orders_customer_id__customer_id__ref_int_customers_.dbe4d365e1, now test.ecommerce_analytics.not_null_int_sellers_seller_id.53a9cec43d)
+[0m22:32:16.086645 [debug] [Thread-4 (]: Began compiling node snapshot.ecommerce_analytics.snapshot_sellers
+[0m22:32:16.097195 [debug] [Thread-2 (]: Began compiling node test.ecommerce_analytics.not_null_int_sellers_seller_id.53a9cec43d
+[0m22:32:16.102964 [debug] [Thread-1 (]: Began executing node model.ecommerce_analytics.order_items_fct
+[0m22:32:16.124091 [debug] [Thread-3 (]: Began executing node test.ecommerce_analytics.valid_date_sequence_int_orders_order_delivered_customer_date__order_purchase_timestamp.a3192b0fae
+[0m22:32:16.136083 [debug] [Thread-4 (]: Writing injected SQL for node "snapshot.ecommerce_analytics.snapshot_sellers"
+[0m22:32:16.170097 [debug] [Thread-1 (]: Finished running node model.ecommerce_analytics.order_items_fct
+[0m22:32:16.206625 [debug] [Thread-3 (]: Finished running node test.ecommerce_analytics.valid_date_sequence_int_orders_order_delivered_customer_date__order_purchase_timestamp.a3192b0fae
+[0m22:32:16.219861 [debug] [Thread-2 (]: Writing injected SQL for node "test.ecommerce_analytics.not_null_int_sellers_seller_id.53a9cec43d"
+[0m22:32:16.230961 [debug] [Thread-1 (]: Began running node test.ecommerce_analytics.not_null_int_sellers_seller_pk.5eb9af824d
+[0m22:32:16.238806 [debug] [Thread-3 (]: Began running node test.ecommerce_analytics.not_null_int_sellers_seller_zip_code_prefix.2de89782a6
+[0m22:32:16.255686 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.order_items_fct, now test.ecommerce_analytics.not_null_int_sellers_seller_pk.5eb9af824d)
+[0m22:32:16.272000 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.valid_date_sequence_int_orders_order_delivered_customer_date__order_purchase_timestamp.a3192b0fae, now test.ecommerce_analytics.not_null_int_sellers_seller_zip_code_prefix.2de89782a6)
+[0m22:32:16.301094 [debug] [Thread-1 (]: Began compiling node test.ecommerce_analytics.not_null_int_sellers_seller_pk.5eb9af824d
+[0m22:32:16.315343 [debug] [Thread-4 (]: Began executing node snapshot.ecommerce_analytics.snapshot_sellers
+[0m22:32:16.318085 [debug] [Thread-3 (]: Began compiling node test.ecommerce_analytics.not_null_int_sellers_seller_zip_code_prefix.2de89782a6
+[0m22:32:16.334499 [debug] [Thread-2 (]: Began executing node test.ecommerce_analytics.not_null_int_sellers_seller_id.53a9cec43d
+[0m22:32:16.352235 [debug] [Thread-4 (]: Finished running node snapshot.ecommerce_analytics.snapshot_sellers
+[0m22:32:16.359898 [debug] [Thread-1 (]: Writing injected SQL for node "test.ecommerce_analytics.not_null_int_sellers_seller_pk.5eb9af824d"
+[0m22:32:16.387760 [debug] [Thread-3 (]: Writing injected SQL for node "test.ecommerce_analytics.not_null_int_sellers_seller_zip_code_prefix.2de89782a6"
+[0m22:32:16.391921 [debug] [Thread-2 (]: Finished running node test.ecommerce_analytics.not_null_int_sellers_seller_id.53a9cec43d
+[0m22:32:16.395351 [debug] [Thread-4 (]: Began running node test.ecommerce_analytics.relationships_int_order_items_seller_id__seller_id__ref_int_sellers_.49d13588b6
+[0m22:32:16.402459 [debug] [Thread-2 (]: Began running node test.ecommerce_analytics.unique_int_sellers_seller_pk.eefcbd6dca
+[0m22:32:16.406577 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly snapshot.ecommerce_analytics.snapshot_sellers, now test.ecommerce_analytics.relationships_int_order_items_seller_id__seller_id__ref_int_sellers_.49d13588b6)
+[0m22:32:16.411221 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_int_sellers_seller_id.53a9cec43d, now test.ecommerce_analytics.unique_int_sellers_seller_pk.eefcbd6dca)
+[0m22:32:16.415363 [debug] [Thread-4 (]: Began compiling node test.ecommerce_analytics.relationships_int_order_items_seller_id__seller_id__ref_int_sellers_.49d13588b6
+[0m22:32:16.418271 [debug] [Thread-2 (]: Began compiling node test.ecommerce_analytics.unique_int_sellers_seller_pk.eefcbd6dca
+[0m22:32:16.427348 [debug] [Thread-1 (]: Began executing node test.ecommerce_analytics.not_null_int_sellers_seller_pk.5eb9af824d
+[0m22:32:16.459251 [debug] [Thread-3 (]: Began executing node test.ecommerce_analytics.not_null_int_sellers_seller_zip_code_prefix.2de89782a6
+[0m22:32:16.506452 [debug] [Thread-2 (]: Writing injected SQL for node "test.ecommerce_analytics.unique_int_sellers_seller_pk.eefcbd6dca"
+[0m22:32:16.512146 [debug] [Thread-4 (]: Writing injected SQL for node "test.ecommerce_analytics.relationships_int_order_items_seller_id__seller_id__ref_int_sellers_.49d13588b6"
+[0m22:32:16.515283 [debug] [Thread-1 (]: Finished running node test.ecommerce_analytics.not_null_int_sellers_seller_pk.5eb9af824d
+[0m22:32:16.518442 [debug] [Thread-3 (]: Finished running node test.ecommerce_analytics.not_null_int_sellers_seller_zip_code_prefix.2de89782a6
+[0m22:32:16.525668 [debug] [Thread-1 (]: Began running node test.ecommerce_analytics.accepted_values_payment_dim_payment_type__not_defined__boleto__debit_card__credit_card__voucher.ed3d8a32fc
+[0m22:32:16.530750 [debug] [Thread-3 (]: Began running node test.ecommerce_analytics.not_null_payment_dim_payment_det_pk.b46b641fdf
+[0m22:32:16.535377 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_int_sellers_seller_pk.5eb9af824d, now test.ecommerce_analytics.accepted_values_payment_dim_payment_type__not_defined__boleto__debit_card__credit_card__voucher.ed3d8a32fc)
+[0m22:32:16.537220 [debug] [Thread-2 (]: Began executing node test.ecommerce_analytics.unique_int_sellers_seller_pk.eefcbd6dca
+[0m22:32:16.542562 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_int_sellers_seller_zip_code_prefix.2de89782a6, now test.ecommerce_analytics.not_null_payment_dim_payment_det_pk.b46b641fdf)
+[0m22:32:16.545099 [debug] [Thread-4 (]: Began executing node test.ecommerce_analytics.relationships_int_order_items_seller_id__seller_id__ref_int_sellers_.49d13588b6
+[0m22:32:16.547118 [debug] [Thread-1 (]: Began compiling node test.ecommerce_analytics.accepted_values_payment_dim_payment_type__not_defined__boleto__debit_card__credit_card__voucher.ed3d8a32fc
+[0m22:32:16.550297 [debug] [Thread-2 (]: Finished running node test.ecommerce_analytics.unique_int_sellers_seller_pk.eefcbd6dca
+[0m22:32:16.553365 [debug] [Thread-3 (]: Began compiling node test.ecommerce_analytics.not_null_payment_dim_payment_det_pk.b46b641fdf
+[0m22:32:16.557358 [debug] [Thread-4 (]: Finished running node test.ecommerce_analytics.relationships_int_order_items_seller_id__seller_id__ref_int_sellers_.49d13588b6
+[0m22:32:16.584098 [debug] [Thread-2 (]: Began running node test.ecommerce_analytics.unique_payment_dim_payment_det_pk.1248fce532
+[0m22:32:16.588822 [debug] [Thread-1 (]: Writing injected SQL for node "test.ecommerce_analytics.accepted_values_payment_dim_payment_type__not_defined__boleto__debit_card__credit_card__voucher.ed3d8a32fc"
+[0m22:32:16.626864 [debug] [Thread-4 (]: Began running node model.ecommerce_analytics.customer_dim
+[0m22:32:16.629007 [debug] [Thread-3 (]: Writing injected SQL for node "test.ecommerce_analytics.not_null_payment_dim_payment_det_pk.b46b641fdf"
+[0m22:32:16.631415 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.unique_int_sellers_seller_pk.eefcbd6dca, now test.ecommerce_analytics.unique_payment_dim_payment_det_pk.1248fce532)
+[0m22:32:16.636083 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.relationships_int_order_items_seller_id__seller_id__ref_int_sellers_.49d13588b6, now model.ecommerce_analytics.customer_dim)
+[0m22:32:16.641432 [debug] [Thread-2 (]: Began compiling node test.ecommerce_analytics.unique_payment_dim_payment_det_pk.1248fce532
+[0m22:32:16.645819 [debug] [Thread-4 (]: Began compiling node model.ecommerce_analytics.customer_dim
+[0m22:32:16.657977 [debug] [Thread-1 (]: Began executing node test.ecommerce_analytics.accepted_values_payment_dim_payment_type__not_defined__boleto__debit_card__credit_card__voucher.ed3d8a32fc
+[0m22:32:16.677204 [debug] [Thread-3 (]: Began executing node test.ecommerce_analytics.not_null_payment_dim_payment_det_pk.b46b641fdf
+[0m22:32:16.681412 [debug] [Thread-2 (]: Writing injected SQL for node "test.ecommerce_analytics.unique_payment_dim_payment_det_pk.1248fce532"
+[0m22:32:16.705025 [debug] [Thread-4 (]: Writing injected SQL for node "model.ecommerce_analytics.customer_dim"
+[0m22:32:16.708423 [debug] [Thread-1 (]: Finished running node test.ecommerce_analytics.accepted_values_payment_dim_payment_type__not_defined__boleto__debit_card__credit_card__voucher.ed3d8a32fc
+[0m22:32:16.712783 [debug] [Thread-3 (]: Finished running node test.ecommerce_analytics.not_null_payment_dim_payment_det_pk.b46b641fdf
+[0m22:32:16.718739 [debug] [Thread-1 (]: Began running node test.ecommerce_analytics.not_null_product_dim_product_id.6de9ecd1df
+[0m22:32:16.721853 [debug] [Thread-3 (]: Began running node test.ecommerce_analytics.not_null_product_dim_product_pk.ef4d7639c0
+[0m22:32:16.727826 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.accepted_values_payment_dim_payment_type__not_defined__boleto__debit_card__credit_card__voucher.ed3d8a32fc, now test.ecommerce_analytics.not_null_product_dim_product_id.6de9ecd1df)
+[0m22:32:16.732911 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_payment_dim_payment_det_pk.b46b641fdf, now test.ecommerce_analytics.not_null_product_dim_product_pk.ef4d7639c0)
+[0m22:32:16.735243 [debug] [Thread-2 (]: Began executing node test.ecommerce_analytics.unique_payment_dim_payment_det_pk.1248fce532
+[0m22:32:16.737047 [debug] [Thread-4 (]: Began executing node model.ecommerce_analytics.customer_dim
+[0m22:32:16.739618 [debug] [Thread-1 (]: Began compiling node test.ecommerce_analytics.not_null_product_dim_product_id.6de9ecd1df
+[0m22:32:16.743446 [debug] [Thread-3 (]: Began compiling node test.ecommerce_analytics.not_null_product_dim_product_pk.ef4d7639c0
+[0m22:32:16.747514 [debug] [Thread-2 (]: Finished running node test.ecommerce_analytics.unique_payment_dim_payment_det_pk.1248fce532
+[0m22:32:16.750414 [debug] [Thread-4 (]: Finished running node model.ecommerce_analytics.customer_dim
+[0m22:32:16.774776 [debug] [Thread-1 (]: Writing injected SQL for node "test.ecommerce_analytics.not_null_product_dim_product_id.6de9ecd1df"
+[0m22:32:16.798769 [debug] [Thread-3 (]: Writing injected SQL for node "test.ecommerce_analytics.not_null_product_dim_product_pk.ef4d7639c0"
+[0m22:32:16.799981 [debug] [Thread-2 (]: Began running node test.ecommerce_analytics.unique_product_dim_product_pk.68b3f335c0
+[0m22:32:16.802454 [debug] [Thread-4 (]: Began running node model.ecommerce_analytics.seller_dim
+[0m22:32:16.816423 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.unique_payment_dim_payment_det_pk.1248fce532, now test.ecommerce_analytics.unique_product_dim_product_pk.68b3f335c0)
+[0m22:32:16.820649 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.customer_dim, now model.ecommerce_analytics.seller_dim)
+[0m22:32:16.825922 [debug] [Thread-2 (]: Began compiling node test.ecommerce_analytics.unique_product_dim_product_pk.68b3f335c0
+[0m22:32:16.830199 [debug] [Thread-4 (]: Began compiling node model.ecommerce_analytics.seller_dim
+[0m22:32:16.832583 [debug] [Thread-1 (]: Began executing node test.ecommerce_analytics.not_null_product_dim_product_id.6de9ecd1df
+[0m22:32:16.833992 [debug] [Thread-3 (]: Began executing node test.ecommerce_analytics.not_null_product_dim_product_pk.ef4d7639c0
+[0m22:32:16.863593 [debug] [Thread-2 (]: Writing injected SQL for node "test.ecommerce_analytics.unique_product_dim_product_pk.68b3f335c0"
+[0m22:32:16.867388 [debug] [Thread-4 (]: Writing injected SQL for node "model.ecommerce_analytics.seller_dim"
+[0m22:32:16.870263 [debug] [Thread-1 (]: Finished running node test.ecommerce_analytics.not_null_product_dim_product_id.6de9ecd1df
+[0m22:32:16.874890 [debug] [Thread-3 (]: Finished running node test.ecommerce_analytics.not_null_product_dim_product_pk.ef4d7639c0
+[0m22:32:16.881001 [debug] [Thread-1 (]: Began running node model.ecommerce_analytics.order_fct
+[0m22:32:16.884806 [debug] [Thread-3 (]: Began running node test.ecommerce_analytics.not_null_customer_dim_customer_id.62f74b7706
+[0m22:32:16.888161 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_product_dim_product_id.6de9ecd1df, now model.ecommerce_analytics.order_fct)
+[0m22:32:16.895259 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_product_dim_product_pk.ef4d7639c0, now test.ecommerce_analytics.not_null_customer_dim_customer_id.62f74b7706)
+[0m22:32:16.896593 [debug] [Thread-4 (]: Began executing node model.ecommerce_analytics.seller_dim
+[0m22:32:16.900084 [debug] [Thread-1 (]: Began compiling node model.ecommerce_analytics.order_fct
+[0m22:32:16.902212 [debug] [Thread-2 (]: Began executing node test.ecommerce_analytics.unique_product_dim_product_pk.68b3f335c0
+[0m22:32:16.904553 [debug] [Thread-3 (]: Began compiling node test.ecommerce_analytics.not_null_customer_dim_customer_id.62f74b7706
+[0m22:32:16.908861 [debug] [Thread-4 (]: Finished running node model.ecommerce_analytics.seller_dim
+[0m22:32:16.930687 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_analytics.order_fct"
+[0m22:32:16.933207 [debug] [Thread-2 (]: Finished running node test.ecommerce_analytics.unique_product_dim_product_pk.68b3f335c0
+[0m22:32:16.955447 [debug] [Thread-3 (]: Writing injected SQL for node "test.ecommerce_analytics.not_null_customer_dim_customer_id.62f74b7706"
+[0m22:32:16.957996 [debug] [Thread-4 (]: Began running node test.ecommerce_analytics.not_null_customer_dim_customer_pk.adb21ec89b
+[0m22:32:16.963385 [debug] [Thread-2 (]: Began running node test.ecommerce_analytics.unique_customer_dim_customer_pk.c772185ca1
+[0m22:32:16.968837 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.seller_dim, now test.ecommerce_analytics.not_null_customer_dim_customer_pk.adb21ec89b)
+[0m22:32:16.974963 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.unique_product_dim_product_pk.68b3f335c0, now test.ecommerce_analytics.unique_customer_dim_customer_pk.c772185ca1)
+[0m22:32:16.978556 [debug] [Thread-1 (]: Began executing node model.ecommerce_analytics.order_fct
+[0m22:32:16.984723 [debug] [Thread-4 (]: Began compiling node test.ecommerce_analytics.not_null_customer_dim_customer_pk.adb21ec89b
+[0m22:32:17.058955 [debug] [Thread-3 (]: Began executing node test.ecommerce_analytics.not_null_customer_dim_customer_id.62f74b7706
+[0m22:32:17.060799 [debug] [Thread-2 (]: Began compiling node test.ecommerce_analytics.unique_customer_dim_customer_pk.c772185ca1
+[0m22:32:17.144598 [debug] [Thread-1 (]: Finished running node model.ecommerce_analytics.order_fct
+[0m22:32:17.270880 [debug] [Thread-4 (]: Writing injected SQL for node "test.ecommerce_analytics.not_null_customer_dim_customer_pk.adb21ec89b"
+[0m22:32:17.293667 [debug] [Thread-3 (]: Finished running node test.ecommerce_analytics.not_null_customer_dim_customer_id.62f74b7706
+[0m22:32:17.337313 [debug] [Thread-2 (]: Writing injected SQL for node "test.ecommerce_analytics.unique_customer_dim_customer_pk.c772185ca1"
+[0m22:32:17.344009 [debug] [Thread-1 (]: Began running node test.ecommerce_analytics.not_null_seller_dim_seller_id.1c3fce8bd6
+[0m22:32:17.370600 [debug] [Thread-3 (]: Began running node test.ecommerce_analytics.not_null_seller_dim_seller_pk.20853e4546
+[0m22:32:17.379965 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.order_fct, now test.ecommerce_analytics.not_null_seller_dim_seller_id.1c3fce8bd6)
+[0m22:32:17.384798 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_customer_dim_customer_id.62f74b7706, now test.ecommerce_analytics.not_null_seller_dim_seller_pk.20853e4546)
+[0m22:32:17.388623 [debug] [Thread-1 (]: Began compiling node test.ecommerce_analytics.not_null_seller_dim_seller_id.1c3fce8bd6
+[0m22:32:17.394836 [debug] [Thread-4 (]: Began executing node test.ecommerce_analytics.not_null_customer_dim_customer_pk.adb21ec89b
+[0m22:32:17.397033 [debug] [Thread-3 (]: Began compiling node test.ecommerce_analytics.not_null_seller_dim_seller_pk.20853e4546
+[0m22:32:17.399277 [debug] [Thread-2 (]: Began executing node test.ecommerce_analytics.unique_customer_dim_customer_pk.c772185ca1
+[0m22:32:17.432446 [debug] [Thread-4 (]: Finished running node test.ecommerce_analytics.not_null_customer_dim_customer_pk.adb21ec89b
+[0m22:32:17.437855 [debug] [Thread-1 (]: Writing injected SQL for node "test.ecommerce_analytics.not_null_seller_dim_seller_id.1c3fce8bd6"
+[0m22:32:17.474763 [debug] [Thread-2 (]: Finished running node test.ecommerce_analytics.unique_customer_dim_customer_pk.c772185ca1
+[0m22:32:17.482275 [debug] [Thread-3 (]: Writing injected SQL for node "test.ecommerce_analytics.not_null_seller_dim_seller_pk.20853e4546"
+[0m22:32:17.484600 [debug] [Thread-4 (]: Began running node test.ecommerce_analytics.unique_seller_dim_seller_pk.f32def514a
+[0m22:32:17.490325 [debug] [Thread-2 (]: Began running node test.ecommerce_analytics.delivered_orders_has_date
+[0m22:32:17.497593 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_customer_dim_customer_pk.adb21ec89b, now test.ecommerce_analytics.unique_seller_dim_seller_pk.f32def514a)
+[0m22:32:17.501788 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.unique_customer_dim_customer_pk.c772185ca1, now test.ecommerce_analytics.delivered_orders_has_date)
+[0m22:32:17.504544 [debug] [Thread-4 (]: Began compiling node test.ecommerce_analytics.unique_seller_dim_seller_pk.f32def514a
+[0m22:32:17.508618 [debug] [Thread-2 (]: Began compiling node test.ecommerce_analytics.delivered_orders_has_date
+[0m22:32:17.535214 [debug] [Thread-4 (]: Writing injected SQL for node "test.ecommerce_analytics.unique_seller_dim_seller_pk.f32def514a"
+[0m22:32:17.544424 [debug] [Thread-2 (]: Writing injected SQL for node "test.ecommerce_analytics.delivered_orders_has_date"
+[0m22:32:17.549564 [debug] [Thread-1 (]: Began executing node test.ecommerce_analytics.not_null_seller_dim_seller_id.1c3fce8bd6
+[0m22:32:17.553306 [debug] [Thread-3 (]: Began executing node test.ecommerce_analytics.not_null_seller_dim_seller_pk.20853e4546
+[0m22:32:17.562495 [debug] [Thread-1 (]: Finished running node test.ecommerce_analytics.not_null_seller_dim_seller_id.1c3fce8bd6
+[0m22:32:17.567361 [debug] [Thread-3 (]: Finished running node test.ecommerce_analytics.not_null_seller_dim_seller_pk.20853e4546
+[0m22:32:17.578767 [debug] [Thread-2 (]: Began executing node test.ecommerce_analytics.delivered_orders_has_date
+[0m22:32:17.583635 [debug] [Thread-2 (]: Finished running node test.ecommerce_analytics.delivered_orders_has_date
+[0m22:32:17.585194 [debug] [Thread-4 (]: Began executing node test.ecommerce_analytics.unique_seller_dim_seller_pk.f32def514a
+[0m22:32:17.589396 [debug] [Thread-4 (]: Finished running node test.ecommerce_analytics.unique_seller_dim_seller_pk.f32def514a
+[0m22:32:17.597015 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:32:17.599345 [debug] [MainThread]: Connection 'test.ecommerce_analytics.delivered_orders_has_date' was properly closed.
+[0m22:32:17.601743 [debug] [MainThread]: Connection 'test.ecommerce_analytics.not_null_seller_dim_seller_id.1c3fce8bd6' was properly closed.
+[0m22:32:17.603840 [debug] [MainThread]: Connection 'test.ecommerce_analytics.unique_seller_dim_seller_pk.f32def514a' was properly closed.
+[0m22:32:17.607306 [debug] [MainThread]: Connection 'test.ecommerce_analytics.not_null_seller_dim_seller_pk.20853e4546' was properly closed.
+[0m22:32:17.649389 [debug] [MainThread]: Command end result
+[0m22:32:18.787561 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/dbt/target/manifest.json
+[0m22:32:18.812436 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/dbt/target/semantic_manifest.json
+[0m22:32:18.869400 [debug] [MainThread]: Wrote artifact OsiDocument to /usr/app/dbt/target/osi_document.json
+[0m22:32:18.926142 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/dbt/target/run_results.json
+[0m22:32:19.065605 [debug] [MainThread]: Acquiring new postgres connection 'generate_catalog'
+[0m22:32:19.069365 [info ] [MainThread]: Building catalog
+[0m22:32:19.186391 [debug] [ThreadPool]: Acquiring new postgres connection 'ecommerce_db.information_schema'
+[0m22:32:19.215441 [debug] [ThreadPool]: Using postgres connection "ecommerce_db.information_schema"
+[0m22:32:19.219064 [debug] [ThreadPool]: On ecommerce_db.information_schema: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "ecommerce-dbt-project", "target_name": "dev", "connection_name": "ecommerce_db.information_schema"} */
+
+    
+    
+
+    select
+        'ecommerce_db' as table_database,
+        sch.nspname as table_schema,
+        tbl.relname as table_name,
+        case tbl.relkind
+            when 'v' then 'VIEW'
+            when 'm' then 'MATERIALIZED VIEW'
+            else 'BASE TABLE'
+        end as table_type,
+        tbl_desc.description as table_comment,
+        col.attname as column_name,
+        col.attnum as column_index,
+        pg_catalog.format_type(col.atttypid, col.atttypmod) as column_type,
+        col_desc.description as column_comment,
+        pg_get_userbyid(tbl.relowner) as table_owner
+
+    from pg_catalog.pg_namespace sch
+    join pg_catalog.pg_class tbl on tbl.relnamespace = sch.oid
+    join pg_catalog.pg_attribute col on col.attrelid = tbl.oid
+    left outer join pg_catalog.pg_description tbl_desc on (tbl_desc.objoid = tbl.oid and tbl_desc.objsubid = 0)
+    left outer join pg_catalog.pg_description col_desc on (col_desc.objoid = tbl.oid and col_desc.objsubid = col.attnum)
+    where ((upper(sch.nspname) = upper('marts') and
+           upper(tbl.relname) = upper('seller_dim')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('order_payments')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('stg_order_payments')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('sellers')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('product_category_name_translation')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('stg_products')) or (upper(sch.nspname) = upper('snapshots') and
+           upper(tbl.relname) = upper('snapshot_customers')) or (upper(sch.nspname) = upper('marts') and
+           upper(tbl.relname) = upper('reviews_dim')) or (upper(sch.nspname) = upper('intermediate') and
+           upper(tbl.relname) = upper('int_products')) or (upper(sch.nspname) = upper('snapshots') and
+           upper(tbl.relname) = upper('snapshot_sellers')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('stg_sellers')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('order_items')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('products')) or (upper(sch.nspname) = upper('intermediate') and
+           upper(tbl.relname) = upper('int_order_payments')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('stg_location')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('customers')) or (upper(sch.nspname) = upper('marts') and
+           upper(tbl.relname) = upper('payment_dim')) or (upper(sch.nspname) = upper('marts') and
+           upper(tbl.relname) = upper('product_dim')) or (upper(sch.nspname) = upper('intermediate') and
+           upper(tbl.relname) = upper('int_customers')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('stg_product_category')) or (upper(sch.nspname) = upper('marts') and
+           upper(tbl.relname) = upper('customer_dim')) or (upper(sch.nspname) = upper('marts') and
+           upper(tbl.relname) = upper('location_dim')) or (upper(sch.nspname) = upper('intermediate') and
+           upper(tbl.relname) = upper('int_order_items')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('stg_order_items')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('stg_order_reviews')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('stg_customers')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('orders')) or (upper(sch.nspname) = upper('intermediate') and
+           upper(tbl.relname) = upper('int_location')) or (upper(sch.nspname) = upper('marts') and
+           upper(tbl.relname) = upper('order_fct')) or (upper(sch.nspname) = upper('intermediate') and
+           upper(tbl.relname) = upper('int_orders')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('stg_orders')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('geolocation')) or (upper(sch.nspname) = upper('raw') and
+           upper(tbl.relname) = upper('order_reviews')) or (upper(sch.nspname) = upper('intermediate') and
+           upper(tbl.relname) = upper('int_sellers')) or (upper(sch.nspname) = upper('marts') and
+           upper(tbl.relname) = upper('order_items_fct')) or (upper(sch.nspname) = upper('intermediate') and
+           upper(tbl.relname) = upper('int_order_reviews')))
+      and not pg_is_other_temp_schema(sch.oid) -- not a temporary schema belonging to another session
+      and tbl.relpersistence in ('p', 'u') -- [p]ermanent table or [u]nlogged table. Exclude [t]emporary tables
+      and tbl.relkind in ('r', 'v', 'f', 'p', 'm') -- o[r]dinary table, [v]iew, [f]oreign table, [p]artitioned table, [m]aterialized view. Other values are [i]ndex, [S]equence, [c]omposite type, [t]OAST table
+      and col.attnum > 0 -- negative numbers are used for system columns such as oid
+      and not col.attisdropped -- column as not been dropped
+
+    order by
+        sch.nspname,
+        tbl.relname,
+        col.attnum
+[0m22:32:19.225134 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:32:19.398910 [debug] [ThreadPool]: SQL status: SELECT 256 in 0.173 seconds
+[0m22:32:19.534263 [debug] [ThreadPool]: On ecommerce_db.information_schema: ROLLBACK
+[0m22:32:19.543205 [debug] [ThreadPool]: On ecommerce_db.information_schema: Close
+[0m22:32:19.798679 [debug] [MainThread]: Wrote artifact CatalogArtifact to /usr/app/dbt/target/catalog.json
+[0m22:32:20.170098 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/dbt/target/manifest.json
+[0m22:32:20.191810 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/dbt/target/semantic_manifest.json
+[0m22:32:20.213626 [debug] [MainThread]: Wrote artifact OsiDocument to /usr/app/dbt/target/osi_document.json
+[0m22:32:20.216309 [info ] [MainThread]: Catalog written to /usr/app/dbt/target/catalog.json
+[0m22:32:20.227223 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": true, "command_wall_clock_time": 15.978906, "process_in_blocks": "3616", "process_kernel_time": 1.85672, "process_mem_max_rss": "137344", "process_out_blocks": "0", "process_user_time": 15.067999}
+[0m22:32:20.230513 [debug] [MainThread]: Command `dbt docs generate` succeeded at 22:32:20.230192 after 15.98 seconds
+[0m22:32:20.232719 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m22:32:20.236113 [debug] [MainThread]: Connection 'ecommerce_db.information_schema' was properly closed.
+[0m22:32:20.242503 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f138f381690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f138a5f4750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f138d36b550>]}
+[0m22:32:20.245456 [debug] [MainThread]: Flushing usage events
+[0m22:32:21.373828 [debug] [MainThread]: An error was encountered while trying to flush usage events
