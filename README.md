@@ -2,7 +2,12 @@
 This project transforms raw operational data from the Brazilian E-Commerce Public Dataset by Olist into a robust, dimensional star schema designed for high-performance business intelligence and reporting.
 The pipeline follows staging ➔ intermediate ➔ marts design.
 
+
+👉
+<i>
 <a href=https://abdelrahman7000.github.io/dbt_olist_ecommerce_data-pipeline> View Interactive dbt Documentation </a> 
+</b>
+</i>
 
 <h2>Key Technical Features</h2>
 <ul>
