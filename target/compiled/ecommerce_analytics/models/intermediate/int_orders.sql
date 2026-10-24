@@ -33,11 +33,13 @@ select
     
     EXTRACT(DAY FROM (order_estimated_delivery_date - order_purchase_timestamp)) as estimated_delivery_days,
     
-    -- Operational Flag
     case 
-        when order_delivered_customer_date > order_estimated_delivery_date and order_status = 'delivered'then true 
-        when order_delivered_customer_date < order_estimated_delivery_date and order_status = 'delivered'then false
-        else null 
+        when order_status = 'delivered'
+            and order_delivered_customer_date is not null
+            and order_estimated_delivery_date is not null
+        then order_delivered_customer_date > order_estimated_delivery_date
+        else null
     end as is_delivery_delayed
+    
 
 from orders

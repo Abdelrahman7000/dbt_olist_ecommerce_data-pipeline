@@ -81,3 +81,12 @@ models:
         description: "seller id created by the source."
         data_tests:
           - not_null
+
+
+  - name: order_fct
+    description: >
+      Captures order related attributes and connects to the customer, product, seller, payment and review dimensions. with aggregated metrics for orders and reviews.
+  
+  - name: order_items_fct
+    description: >
+      Captures order item related attributes and connects to the product, seller.
