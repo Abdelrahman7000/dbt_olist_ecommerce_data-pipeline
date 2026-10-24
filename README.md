@@ -19,7 +19,7 @@ The pipeline follows staging ➔ intermediate ➔ marts design.
 </ul>
 
 <h2>🔀 DAG</h2>
-
+<img src=https://github.com/user-attachments/assets/ed6e84e1-ac2b-46ea-8556-ea9a0da341a9>
 
 <h2>Data Model</h2>
 <img src="https://github.com/user-attachments/assets/1a2b9112-37fe-4c45-9008-0db846cb35ac">
