@@ -41,6 +41,7 @@ The pipeline follows staging ➔ intermediate ➔ marts design.
 
 `positive_value` , `valid_date_sequence` , `not_null`, and `unique`.
 
+
 <b>Singular Tests</b>: Custome sql tests to catch business logic errors:
 
 `delivered_orders_has_date` : To catch delivered orders that have no delivery dates.
