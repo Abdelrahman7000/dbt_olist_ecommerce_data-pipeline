@@ -39,9 +39,25 @@ services:
       - dbt_ecom_network
     # Keeps container idle so you can execute custom dbt commands
     entrypoint: ["tail", "-f", "/dev/null"]
+  
+  metabase:
+    image: metabase/metabase:latest
+    container_name: metabase
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - metabase_data:/metabase-data
+    networks:
+      - dbt_ecom_network
+    depends_on:
+      postgres:
+        condition: service_healthy
+
 
 volumes:
   postgres_data:
+  metabase_data:
 
 networks:
   dbt_ecom_network:

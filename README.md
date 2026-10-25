@@ -19,7 +19,7 @@ The pipeline follows staging ➔ intermediate ➔ marts design.
 </ul>
 
 <h2>🔀 DAG</h2>
-
+<img src=https://github.com/user-attachments/assets/ed6e84e1-ac2b-46ea-8556-ea9a0da341a9>
 
 <h2>Data Model</h2>
 <img src="https://github.com/user-attachments/assets/1a2b9112-37fe-4c45-9008-0db846cb35ac">
@@ -48,6 +48,12 @@ The pipeline follows staging ➔ intermediate ➔ marts design.
 
 
 <h2>📊 Data Insights</h2>
+<img src="https://github.com/user-attachments/assets/015d15cf-6a93-4ecb-b2c4-f980792f8add" >
+<img src="https://github.com/user-attachments/assets/208134b0-b126-4030-b9ff-f01c47ef406a" >
+<img src="https://github.com/user-attachments/assets/d1e7adc7-64eb-4a14-9899-228b9f41bb3c" >
+<img src="https://github.com/user-attachments/assets/362109b6-35f4-4f4d-8a1c-a05627d699bd" >
+<img src="https://github.com/user-attachments/assets/dde3983d-bb9b-4ef9-9785-0258489923f9" >
+ 
 <h2>🚀 Getting Started & Setup</h2>
 
 </ul>
